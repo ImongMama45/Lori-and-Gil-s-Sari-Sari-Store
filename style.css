@@ -530,10 +530,6 @@ section {
     padding: 0;
 }
 
-.top-image {
-    position: relative;
-}
-
 
 .show-more {
     position: absolute; /* Position it absolutely within the relative parent */
