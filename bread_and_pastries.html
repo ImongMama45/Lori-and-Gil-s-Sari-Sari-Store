@@ -3,10 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bread and pastries | Products | Promotional Food Website</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    header {
+        background-color: #97632b;
+        position: fixed;
+        z-index: 50;
+        width: 100%;
+        height: auto;
+        box-shadow: 0 4px 6px rgba(-50, 0, 0, 0.2); /* Adds a shadow */
+    }
+
+    .menu {
+        background-color: #97632b;
+        box-shadow: -20px 4px 6px rgba(0, 0, 0, 0.2); /* Adds a shadow */
+    }
+
+    .menu .dropdown{
+        background-color: #97632b;
+        box-shadow: 5px 4px 6px rgba(0, 0, 0, 0.2); /* Adds a shadow */
+    }
+
+        /* Base styles for the top image */
+    .top-image {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 30%; /* Adjust height as needed */
+        overflow: hidden;
+    }
+
+        
+    .top-image {
+        position: relative;
+    }
+
+    .top-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Carousel Overlay */
+    .carousel-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        pointer-events: none;
+    }
+
+    /* Carousel Container */
+    .carousel {
+        width: 80%; /* Adjust width */
+        height: 80%; /* Adjust height */
+        overflow: hidden;
+        position: relative;
+    }
+
+    /* Carousel Slides */
+    .carousel-slide {
+        display: flex;
+        width: 300%;
+
+        animation: slide-animation 12s infinite;
+    }
+
+    .carousel-slide img {
+        width: 20%;
+        margin-left: 10rem;
+        height: auto;
+        flex-shrink: 0;
+        object-fit: cover;
+        border-radius: 8px; /* Optional: adds rounded corners */
+    }
+
+    /* Animation for Sliding */
+    @keyframes slide-animation {
+        0% { transform: translateX(0); }
+        33% { transform: translateX(-35%); }
+        66% { transform: translateX(-65%); }
+        80%{ transform: translateX(0); }
+    }
+
+    
+    @media (min-width: 767px) { 
+        .menu{
+            box-shadow: none;
+        }
+    }
+
+    @media (max-width: 612px) {
+        .top-image {
+        margin-top: 3%;
+        position: relative;
+        width: 100%;
+        height: 300px; /* Adjust height as needed */
+        overflow: hidden;
+        }   
+        
+    }
+
+
+
+    
+    </style>
 </head>
 <body>
-    <header>
+    <!-- COPY THIS TO YOUR PAGESSSSSSS PARA SA Navigation BAR NATIN -->
+     <!-- SIMULA DITO  -->
+
+     <header >
         <nav>
             <ul class="navbar">
                 <li class="logo"><a href="#"><img src="./images/Logo.png" alt="logo"></a></li>
@@ -16,20 +129,121 @@
                     <span class="bar"></span>
                     <span class="bar"></span>
                 </label>
-                <!-- Navigation Links - Will be hidden on mobile -->
                 <span class="menu">
-                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="aboutus.html">About Us</a></li>
-                    <li><a href="products.html">Products</a></li>
+                    <li>
+                        <a href="products.html" id="products-menu" class="active">Products</a>
+                        <ul class="dropdown">
+                            <li><a href="skewered_foods.html">Skewered Foods</a></li>
+                            <li><a href="bread_and_pastries.html"class="active">Bread And Pastries</a></li>
+                            <li><a href="affordable_meals.html">Affordable Meals</a></li>
+                        </ul>
+                    </li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="testimonials.html">Testimonials</a></li>   
                 </span>
                 <li><a href="signup.html" class="signup-btn">Sign Up</a></li>
-            </ul>
+            </ul> 
         </nav>
     </header>
-    <h1>
-        Bread And Pastries
-    </h1>
+
+    <div class="background-section" id="background-section" style="background-color: #d19a6a;"> <!-- Change this color as needed -->
+        <p>This section allows you to assign a background color.</p>
+    </div>
+
+    <main >
+
+        <div class="background-section" id="background-section" style="background-color: #d19a6a;"> <!-- Change this color as needed -->
+            <p>This section allows you to assign a background color.</p>
+        </div>
+
+        <div class="top-image">
+            <img src="./images/pRODUCTS ( Bread).png" alt="Background Image">
+            <div class="carousel-overlay">
+                <div class="carousel">
+                    <div class="carousel-slide">
+                        <img src="./images/food-menu-bakery/animated/Group 46.png" alt="Slide 1">
+                        <img src="./images/food-menu-bakery/animated/Group 45.png" alt="Slide 2">
+                        <img src="./images/food-menu-bakery/animated/Siomai.png" alt="Slide 3">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="show-more">
+            <a href="#menu-section" class="show-more-button">Show More ></a> <!-- Updated link to scroll down -->
+        </div>
+
+        <section class="menu-section" id="menu-section"> <!-- Added id for scrolling -->
+            <div class="menu-item">
+                <img src="./images/food-menu-bakery/CRINKLES (1).png" alt="Food 1" class="menu-image"> <!-- Replace with actual image path -->
+                <h3>Donut</h3>
+                <p class="price">$10.00</p>
+            </div>
+            <div class="menu-item">
+                <img src="./images/food-menu-bakery/CRINKLES (2).png" alt="Food 2" class="menu-image"> <!-- Replace with actual image path -->
+                <h3>Brownies</h3>
+                <p class="price">$12.00</p>
+            </div>
+            <div class="menu-item">
+                <img src="./images/food-menu-bakery/pic.png" alt="Food 3" class="menu-image"> <!-- Replace with actual image path -->
+                <h3>Inipit</h3>
+                <p class="price">$8.00</p>
+            </div>
+            <div class="menu-item">
+                <img src="./images/food-menu-bakery/pic (1).png" alt="Food 4" class="menu-image"> <!-- Replace with actual image path -->
+                <h3>Crinkles</h3>
+                <p class="price">$15.00</p>
+            </div>
+            <div class="menu-item">
+                <img src="./images/food-menu-bakery/CRINKLES (2).png" alt="Food 5" class="menu-image"> <!-- Replace with actual image path -->
+                <h3>Ube</h3>
+                <p class="price">$9.00</p>
+            </div>
+            <div class="menu-item">
+                <img src="./images/food-menu-bakery/pic.png" alt="Food 6" class="menu-image"> <!-- Replace with actual image path -->
+                <h3>Lakas</h3>
+                <p class="price">$11.00</p>
+            </div>
+            <div class="menu-item">
+                <img src="./images/food-menu-bakery/pic.png" alt="Food 7" class="menu-image"> <!-- Replace with actual image path -->
+                <h3>Marble</h3>
+                <p class="price">$7.00</p>
+            </div>
+            <div class="menu-item">
+                <img src="./images/food-menu-bakery/CRINKLES (3).png" alt="Food 8" class="menu-image"> <!-- Replace with actual image path -->
+                <h3>Spanish Bread</h3>
+                <p class="price">$14.00</p>
+            </div>
+            <div class="menu-item">
+                <img src="./images/food-menu-bakery/pic.png" alt="Food 9" class="menu-image"> <!-- Replace with actual image path -->
+                <h3>Pinagong</h3>
+                <p class="price">$6.00</p>
+            </div>
+            <div class="menu-item">
+                <img src="./images/food-menu-bakery/pic.png" alt="Food 10" class="menu-image"> <!-- Replace with actual image path -->
+                <h3>Kalihim</h3>
+                <p class="price">$13.00</p>
+            </div>
+            <div class="menu-item">
+                <img src="./images/food-menu-bakery/pic.png" alt="Food 11" class="menu-image"> <!-- Replace with actual image path -->
+                <h3>Banana Bread</h3>
+                <p class="price">$10.50</p>
+            </div>
+            <div class="menu-item">
+                <img src="./images/food-menu-bakery/pic.png" alt="Food 12" class="menu-image"> <!-- Replace with actual image path -->
+                <h3>Pudding</h3>
+                    <h3>Food 12</h3>
+                    <p class="price">$11.50</p>
+                </div>
+            </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Lori & Gil's Sari-Sari Store. All rights reserved.</p>
+    </footer>
+
+
 </body>
 </html>

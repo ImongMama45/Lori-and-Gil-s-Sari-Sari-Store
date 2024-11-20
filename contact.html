@@ -24,10 +24,10 @@
                     <span class="bar"></span>
                 </label>
                 <span class="menu">
-                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="aboutus.html">About Us</a></li>
                     <li><a href="products.html">Products</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.html"  class="active">Contact</a></li>
                     <li><a href="testimonials.html">Testimonials</a></li>   
                 </span>
                 <li><a href="signup.html" class="signup-btn">Sign Up</a></li>
@@ -38,9 +38,58 @@
      <!-- HANGGANG DITO -->
       
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>We'd love to hear from you!</p>
+    <!-- Main Contact Section -->
+    <section class="contact-section">
+        <img src="./images/contact-background.jpg" alt="design" class="design-image">
+        <div class="overlay">
+            <h1>CONTACT US</h1>
+            <h2>How can we help you?</h2>
+            <p>Got a question, comment or suggestion? We'd love to hear from you.</p>
+
+            <div class="container">
+
+                <div class="contact-left">
+                <p><span>Messenger:</span> Alaiza Omal</p>
+                <p><span>Email:</span> gilandlorikitchen@gmail.com</p>
+                </div>
+
+                <div class="contact-right"> 
+                    <p><span>Phone:</span> 09203804739</p>
+                    <p><span>Address:</span> WHWQ+RMH, <br> Argentina St., Lucena, <br> 4301 Quezon</p>
+                </div>
+            </div>
+
+            <div class="form-container">
+                <h1>Leave Us Your Suggestion</h1>
+                <p>We value your feedback! Please leave us a suggestion or comment.</p>
+                <form action="submit_suggestion.php" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your name">
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email">
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="message">Your Suggestion:</label>
+                        <textarea id="message" name="message" rows="4" required placeholder="Write your suggestion or comment here..."></textarea>
+                    </div>
+        
+                    <button type="submit" class="submit-btn">Submit Suggestion</button>
+                </form>
+            </div>
+
+        </div>
+
+
+        
     </section>
+    <footer>
+        <p>&copy; 2024 Lori & Gil's Sari-Sari Store. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>

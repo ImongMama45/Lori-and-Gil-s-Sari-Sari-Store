@@ -21,9 +21,9 @@
                     <span class="bar"></span>
                 </label>
                 <span class="menu">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="aboutus.html">About Us</a></li>
-                    <li><a href="products.html">Products</a></li>
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="aboutus.html" class="active">About Us</a></li>
+                    <li><a href="products.html" >Products</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="testimonials.html">Testimonials</a></li>   
                 </span>
@@ -31,12 +31,45 @@
             </ul>
         </nav>
     </header>
-
-     <!-- HANGGANG DITO -->
-
-    <section id="AboutUs">
-        <h2>About Us</h2>
-        <p>We'd love to hear from you!</p>
+    <section class="about-us">
+        <svg class="curved-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300">
+            <defs>
+                <!-- Adjust the curve path to center the text -->
+                <path id="curve" d="M50,150 Q250,0 450,150" />
+            </defs>
+            <text width="500">
+                <textPath class="curved-text" href="#curve" startOffset="50%">
+                    ABOUT US
+                </textPath>
+            </text>
+        </svg>
+    
+        <div class="store-image">
+            <img src="./images/aboutus-background.jpg" alt="Store image">
+        </div>
+    
+        <div class="lines">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    
+        <div class="about-text">
+            <p>Welcome to Lori & Gil's Sari-Sari Store, it is a family-owned store for your friendly neighborhood sari-sari store located near Dalubhasaan ng Lungsod ng Lucena.</p>
+            <p>We offer a wide range of essentials and local delicacies at affordable prices! In addition to everyday items, we proudly serve freshly prepared meals in our cozy eatery, savory smoked meats, and delightful baked goods straight from our in-house bakery.</p>
+        </div>
+    
+        <div class="side-images">
+            <img src="bbq.jpg" alt="Barbecue">
+            <img src="banana-cue.jpg" alt="Banana Cue">
+            <img src="fried.jpg" alt="Fried Food">
+        </div>
     </section>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Lori & Gil's Sari-Sari Store. All rights reserved.</p>
+    </footer>
+    
 </body>
 </html>
