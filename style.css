@@ -1693,6 +1693,7 @@ footer p {
     }
 
     .make_account_container .signup-container {
+        background-size: cover;
         width: 90%; /* Reduce container width */
         padding: 15px; /* Adjust padding */
     }
