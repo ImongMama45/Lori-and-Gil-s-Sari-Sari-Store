@@ -477,8 +477,6 @@ section {
     padding: 30px;
     text-align: center;
     width: 500px;
-    height: 320px;
-    color: black;
     position: relative;
 }
 
@@ -1590,7 +1588,76 @@ h4 {
         overflow: hidden; /* Ensures only the semi-circle is visible */
     }
 
-    
+
+
+   /* Log in and sign in */
+
+ 
+    /* login */
+
+    .login-container {
+        margin-right: 25%;
+        margin-left: -25%;
+        width: 80%;
+        margin-top: 100%;
+    }
+
+
+    .make_account_container .signup-container {
+        width: 95%; /* Almost full screen for containers */
+    }
+
+    .options {
+        flex-direction: column; /* Stack options vertically */
+        align-items: center;
+    }
+
+    .options a {
+        margin-bottom: 10px; /* Add spacing between stacked links */
+    }
+
+
+
+    .welcome-logo .signup-logo {
+        width: 70%; /* Scale images for smaller screens */
+        max-width: 200px;
+        margin-top: 20%;
+        margin-left: -100%;
+    }
+
+    #welcome{
+        margin-left: -10%;
+    }
+
+    .sign_up_container .welcome-logo{
+        width: 100%;
+        max-width: 300px;
+        margin-right: 150%;
+
+    }
+
+    .sign_up_container{
+        position: relative;
+        width: 150vh;
+        height: 100vh;
+        max-width: 900px;
+        align-items: center;
+    }
+
+    .login-container {
+        margin-top: 0%;
+        margin-right: 20%;
+        
+        
+    }
+
+    .login-container form{
+        padding: 20px;
+        align-items: center;
+        gap: 1px;
+        border-radius: 1rem;
+    }
+
     
 }
     
@@ -1742,6 +1809,82 @@ h4 {
         top: 37%;
         left: 20px;
     }
+
+
+  /* Log in and sign up */
+ 
+    /* LOGINS AND SIGNUPS */
+
+
+    
+    .welcome-logo .signup-logo {
+        width: 80%; /* Scale images for smaller screens */
+        max-width: 200px;
+        margin-top: 20%;
+        margin-left: -10%;
+    }
+
+    .sign_up_container .welcome-logo{
+        width: 100%;
+        max-width: 300px;
+        margin-top: 20%;
+        margin-left: -50%;
+    }
+
+    .sign_up_container{
+        position: relative;
+        width: 150vh;
+        height: 100vh;
+        max-width: 900px;
+        align-items: center;
+    }
+
+    .login-container {
+        margin-top: 0%;
+        margin-right: 20%;
+        
+        
+    }
+
+    .login-container form{
+        padding: 20px;
+        align-items: center;
+        gap: 1px;
+        border-radius: 1rem;
+    }
+
+    .input-group .name .pass{
+        padding-top: 10px;
+        width: 200px;
+    }
+
+    .input-group input{
+        padding: 20px;
+        
+    }
+
+    .login-box {
+        position: relative;
+        padding: 5px;
+        width: 50vh;
+    }
+
+    .make_account_container .signup-container {
+        background-size: cover;
+        width: 90%; /* Reduce container width */
+        padding: 15px; /* Adjust padding */
+    }
+
+    .input-group input, .email, .password, .USERNAME {
+        width: 90%; /* Inputs span most of the screen */
+        max-width: 400px;
+    }
+
+    .login-button, .signup-button {
+        width: 100%; /* Buttons use full width */
+        max-width: 150px;
+    }
+ 
 
    
 
