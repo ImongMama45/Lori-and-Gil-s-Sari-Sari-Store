@@ -439,7 +439,6 @@ form button:hover {
 
 header, .navbar, .footer, .content {
     position: relative;
-    z-index: 10;
 }
 
 
