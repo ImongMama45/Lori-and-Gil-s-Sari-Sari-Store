@@ -9,14 +9,12 @@
 </head>
 <style>
 body {
-    background-image: url('bg.png');
+    background-image: url('./images/bg.png');
     background-size: cover;
+    background-repeat: repeat-y;
 }
 </style>
 <body>
-    <!-- COPY THIS TO YOUR PAGESSSSSSS PARA SA Navigation BAR NATIN -->
-     <!-- SIMULA DITO  -->
-
     <header>
         <nav>
             <ul class="navbar">
@@ -28,16 +26,9 @@ body {
                     <span class="bar"></span>
                 </label>
                 <span class="menu">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="aboutus.html">About Us</a></li>
-                    <li>
-                        <a href="products.html" id="products-menu" class="active">Products</a>
-                        <ul class="dropdown">
-                            <li><a href="skewered_foods.html">Skewered Foods</a></li>
-                            <li><a href="bread_and_pastries.html">Bread And Pastries</a></li>
-                            <li><a href="affordable_meals.html">Affordable Meals</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="products.html">Products</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="testimonials.html">Testimonials</a></li>   
                 </span>
@@ -46,16 +37,22 @@ body {
         </nav>
     </header>
 
-     <!-- HANGGANG DITO -->
-
     <section id="products">
+
         <div class="image-container">
+            
             <div class="image-wrapper">
                 <img src="./images/image1.png" alt="Picture" class="image1">
                 <a href="aboutus.html">
                     <div class="overlay-text">LEARN MORE</div>
                 </a>  
             </div>
+
+
+
+        </div>
+        <div class="image-container2">
+            
 
             <div class="text1">AFFORDABLE MEALS</div>
 
@@ -69,20 +66,17 @@ body {
                 <img src="./images/image3.png" alt="Second Product" class="image3">
             </a>
 
+            <div class="text3">BREAD AND PASTRIES</div>
+
             <a href="bread_and_pastries.html">
                 <img src="./images/image4.png" alt="Third Product" class="image4">
             </a>
-            
-            <div class="text3">BREAD AND PASTRIES</div>
-
             
 
             <div class="text4">"QUALITY SERVICE IS QUALITY LIFE"</div>
             
         </div>
     </section>
-    <footer>
-        <p>&copy; 2024 Lori & Gil's Sari-Sari Store. All rights reserved.</p>
-    </footer>
 </body>
 </html>
+
