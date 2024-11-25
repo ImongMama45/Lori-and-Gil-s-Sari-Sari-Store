@@ -882,21 +882,32 @@ transform: translateY(-5px);
 
 /* SKEWERED FOODS MENU */
 
-#skewered_foods {   
-    text-align: center; 
-
+.image-container3 { 
+    display: flex; 
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20% ;
+    
 }
 
+.image-wrapper2 {
+    position: relative; /* Position relative for the wrapper */
+}
+
+
 .skewered_foods {
-    position: absolute; /* Position absolute for the text */
-    top: 158%; /* Center vertically */
+    position: relative; /* Position absolute for the text */
+    top: 185%; /* Center vertically */
     left: 50%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Adjust for text size */
+    width: 50;
     color: #ffffff; /* Text color */
     padding: 1px; /* Padding around the text */
     padding-left: 20px;
     padding-right: 20px;
-    font-size: 60px; /* Font size */
+    font-size: 4rem; /* Font size */
     font-family: 'Koulen', sans-serif; /* Use the Koulen font */
     text-align: center; /* Center text */
 }
@@ -905,30 +916,18 @@ transform: translateY(-5px);
 .seemore {
     position: absolute; /* Position absolute for the text */ 
     transform: translate(-50%, -50%); /* Adjust for text size */
+    top: 90%; 
+    left: 15%; 
     color: #ffffff; /* Text color */
     background-color: #16534B; /* Semi-transparent background */
     padding: 1px; /* Padding around the text */
-    left: 17%;
-    top: 120%;
     padding-left: 20px;
-    padding-right: 20px;
-    font-size: 40px; /* Font size */
-    font-family: 'Koulen', sans-serif; /* Use the Koulen font */
-    text-align: center; /* Center text */
+    padding-right: 20px;;
+    font-size: 3rem; /* Use rem for responsive font size */
+    font-family: 'Koulen', sans-serif; 
+    text-align: center; 
+    
 }
-
-.arrow {
-    position: absolute; /* Position absolute for the text */ 
-    top: 59%;
-}
-
-.bananaquebig {
-    position: absolute; /* Position absolute for the text */ 
-    left: 30%;
-    top: 30%;
-   
-}
-
 
 
 
@@ -1885,4 +1884,34 @@ h4 {
         top: 70%; /* Adjust position for smaller screens */
     }
 
+}
+
+
+@media (max-width: 768px) {
+    
+
+    .seemore{
+        font-size: 1.2rem; /* Smaller font size for tablets */
+        top: 75%; /* Adjust position for smaller screens */
+    }
+
+    .skewered_foods {
+        font-size: 2rem; /* Smaller font size for tablets */
+        top: 90%; /* Adjust position for smaller screens */
+    }
+
+
+
+}
+
+@media (max-width: 480px) {
+    .seemore {
+        font-size: 1.2rem; /* Even smaller font size for mobile */
+        top: 70%; /* Further adjust position */
+    }
+
+    .skewered_foods {
+        font-size: 1.5rem; /* Even smaller font size for mobile */
+        top: 90%; /* Further adjust position */
+    }
 }
