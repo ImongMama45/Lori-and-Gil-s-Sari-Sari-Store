@@ -679,130 +679,101 @@ section {
 
 
 
-/* PRODUCTS  */
+/*PRODUCTS MAIN MENU */
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 section {   
     padding: 0; 
     text-align: center; 
+
 }
 
 .image-container { 
     display: flex; 
+    width: 100%;
+    height: auto;
     flex-direction: column;
     align-items: center;
-    background: url("./images/bg.png") no-repeat center center/cover;
+    margin-bottom: 5% ;
+    
 }
+
+
+.image-container2 img {
+    width: 100%; /* Set to 100% to make it responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.image2 {
+    width: 80%; /* Increase size for image 2 */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 600px; /* Optional: Set a max width */
+}
+
+.image3 {
+    width: 80%; /* Increase size for image 3 */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 600px; /* Optional: Set a max width */
+}
+
+.image4 {
+    width: 80%; /* Increase size for image 4 */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 600px; /* Optional: Set a max width */
+}
+
 
 .image-wrapper {
     position: relative; /* Position relative for the wrapper */
 }
 
-#image1 {
-    width: 100%; /* Make the first image take full width */
-    height: auto; /* Maintain aspect ratio */
-    max-height: 400px; /* Set a max height for the image */
-    object-fit: cover; /* Cover the area while maintaining aspect ratio */      
-}
 
 .overlay-text {
-    position: absolute; /* Position absolute for the text */
-    top: 80%; /* Center vertically */
-    left: 75%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust for text size */
-    color: #000; /* Text color */
-    background-color: #d4d700; /* Semi-transparent background */
-    padding: 1px; /* Padding around the text */
+    position: absolute; 
+    top: 80%; 
+    left: 75%; 
+    transform: translate(-50%, -50%); 
+    color: #000; 
+    background-color: #d4d700; 
+    padding: 1px; 
     padding-left: 20px;
     padding-right: 20px;
-    font-size: 30px; /* Font size */
-    font-family: 'Koulen', sans-serif; /* Use the Koulen font */
-    text-align: center; /* Center text */
+    font-size: 2rem; /* Use rem for responsive font size */
+    font-family: 'Koulen', sans-serif; 
+    text-align: center; 
 }
 
-.text1 {
-    position: absolute; /* Position absolute for the text */
-    top: 115%; /* Center vertically */
-    left: 25%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust for text size */
+.text1, .text2, .text3 {
+    font-size: 1.5rem; /* Responsive font size */
+    margin: 10px 5%; /* Reduced horizontal margin */
     color: #000; /* Text color */
     background-color: #d4d700; /* Semi-transparent background */
-    padding: 1px; /* Padding around the text */
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 30px; /* Font size */
+    padding: .5rem; /* Padding around the text */
     font-family: 'Koulen', sans-serif; /* Use the Koulen font */
     text-align: center; /* Center text */
+    max-width: 20%; /* Set a maximum width to limit the text border */
+    margin-left: auto; /* Center the text horizontally */
+    margin-right: auto; /* Center the text horizontally */
 }
-.text2 {
-    position: absolute; /* Position absolute for the text */
-    top: 155%; /* Center vertically */
-    left: 23%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust for text size */
-    color: #000; /* Text color */
-    background-color: #d4d700; /* Semi-transparent background */
-    padding: 1px; /* Padding around the text */
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 30px; /* Font size */
-    font-family: 'Koulen', sans-serif; /* Use the Koulen font */
-    text-align: center; /* Center text */
-}
-.text3 {
-    position: absolute; /* Position absolute for the text */
-    top: 195%; /* Center vertically */
-    left: 26%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust for text size */
-    color: #000; /* Text color */
-    background-color: #d4d700; /* Semi-transparent background */
-    padding: 1px; /* Padding around the text */
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 30px; /* Font size */
-    font-family: 'Koulen', sans-serif; /* Use the Koulen font */
-    text-align: center; /* Center text */
-}
+
 .text4 {
-    position: absolute; /* Position absolute for the text */
-    top: 235%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust for text size */
+
+    font-size: 1.5rem; /* Responsive font size */
+    margin: 10px 5%; /* Reduced horizontal margin */
     color: #ffffff; /* Text color */
-    padding: 1px; /* Padding around the text */
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 30px; /* Font size */
+    padding: .5rem; /* Padding around the text */
     font-family: 'Koulen', sans-serif; /* Use the Koulen font */
     text-align: center; /* Center text */
-}
-.image-container .image2 { 
-    display: flex; 
-    flex-direction: column; 
-    margin-left: auto;
-    margin-right: auto; 
-    margin-top: 100px; 
-    height: 150px;
-    width: 700px; 
-    text-align: 'center'; 
-}
-.image-container .image3 { 
-    display: flex; 
-    flex-direction: column; 
-    margin-left: auto; 
-    margin-right: auto; 
-    margin-top: 100px; 
-    height: 150px; 
-    width: 700px; 
-    text-align: 'center';
-}
-.image-container .image4 { 
-    display: flex; 
-    flex-direction: column; 
-    margin-left: auto; 
-    margin-right: auto; 
-    margin-top: 100px; 
-    height: 150px; 
-    width: 700px; 
-    text-align: 'center'; 
+    max-width: 50%; /* Set a maximum width to limit the text border */
+    margin-left: auto; /* Center the text horizontally */
+    margin-right: auto; /* Center the text horizontally */
+
+
 }
 
 
@@ -1886,5 +1857,32 @@ h4 {
  
 
    
+
+}
+
+@media (max-width: 768px) {
+    .overlay-text {
+        font-size: 1rem; /* Smaller font size for tablets */
+        top: 75%; /* Adjust position for smaller screens */
+    }
+
+    .text1, .text2, .text3, .text4{
+        font-size: .7rem; /* Smaller font size for tablets */
+        top: 75%; /* Adjust position for smaller screens */
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    .overlay-text {
+        font-size: 1.2rem; /* Even smaller font size for mobile */
+        top: 70%; /* Further adjust position */
+    }
+
+    .text1, .text2, .text3, .text4{
+        font-size: 1rem; /* Smaller font size for tablets */
+        top: 70%; /* Adjust position for smaller screens */
+    }
 
 }
