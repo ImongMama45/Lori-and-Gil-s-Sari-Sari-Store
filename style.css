@@ -912,7 +912,6 @@ transform: translateY(-5px);
 /* SKEWERED FOODS MENU */
 
 #skewered_foods {   
-    padding-top: 900px; 
     text-align: center; 
 
 }
@@ -1640,7 +1639,7 @@ h4 {
         position: relative;
         width: 150vh;
         height: 100vh;
-        max-width: 900px;
+        max-width: 610px;
         align-items: center;
     }
 
