@@ -15,90 +15,86 @@
         background-color: #3EA597;
         background-size: 1261px 800px;
     }
+
+
+    header {
+        background-color: #16534B;
+    }
+        /* Base styles for the top image */
+    .top-image {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 30%;
+        overflow: hidden;
+    }
+
+    
+
+        
+    .top-image {
+        position: relative;
+    }
+
+    .top-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Carousel Overlay */
+    .carousel-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        pointer-events: none;
+    }
+
+    /* Carousel Container */
+    .carousel {
+        width: 80%; 
+        height: 80%; 
+        overflow: hidden;
+        position: relative;
+    }
+
+    /* Carousel Slides */
+    .carousel-slide {
+        display: flex;
+        width: 300%;
+
+        animation: slide-animation 12s infinite;
+    }
+
+    .carousel-slide img {
+        width: 20%;
+        margin-left: 10rem;
+        height: auto;
+        flex-shrink: 0;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    @keyframes slide-animation {
+        0% { transform: translateX(0); }
+        33% { transform: translateX(-35%); }
+        66% { transform: translateX(-65%); }
+        80%{ transform: translateX(0); }
+    }
+
+    
 </style>
 <body>
     <!-- COPY THIS TO YOUR PAGESSSSSSS PARA SA Navigation   BAR NATIN -->
      <!-- SIMULA DITO  -->
 
      <header>
-
-        <style>
-            header {
-                background-color: #16534B;
-            }
-                /* Base styles for the top image */
-            .top-image {
-                position: relative;
-                display: flex;
-                width: 100%;
-                height: 30%;
-                overflow: hidden;
-            }
-        
-            
-        
-                
-            .top-image {
-                position: relative;
-            }
-        
-            .top-image img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        
-            /* Carousel Overlay */
-            .carousel-overlay {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                z-index: 10;
-                pointer-events: none;
-            }
-        
-            /* Carousel Container */
-            .carousel {
-                width: 80%; 
-                height: 80%; 
-                overflow: hidden;
-                position: relative;
-            }
-        
-            /* Carousel Slides */
-            .carousel-slide {
-                display: flex;
-                width: 300%;
-        
-                animation: slide-animation 12s infinite;
-            }
-        
-            .carousel-slide img {
-                width: 20%;
-                margin-left: 10rem;
-                height: auto;
-                flex-shrink: 0;
-                object-fit: cover;
-                border-radius: 8px;
-            }
-        
-            @keyframes slide-animation {
-                0% { transform: translateX(0); }
-                33% { transform: translateX(-35%); }
-                66% { transform: translateX(-65%); }
-                80%{ transform: translateX(0); }
-            }
-        
-            
-        
-                    
-
-        </style>
         
         <nav>
             <ul class="navbar">
