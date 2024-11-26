@@ -24,9 +24,79 @@
 
         <style>
             header {
-    background-color: #16534B;
-}
-
+                background-color: #16534B;
+            }
+                /* Base styles for the top image */
+            .top-image {
+                position: relative;
+                display: flex;
+                width: 100%;
+                height: 30%;
+                overflow: hidden;
+            }
+        
+            
+        
+                
+            .top-image {
+                position: relative;
+            }
+        
+            .top-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        
+            /* Carousel Overlay */
+            .carousel-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 10;
+                pointer-events: none;
+            }
+        
+            /* Carousel Container */
+            .carousel {
+                width: 80%; 
+                height: 80%; 
+                overflow: hidden;
+                position: relative;
+            }
+        
+            /* Carousel Slides */
+            .carousel-slide {
+                display: flex;
+                width: 300%;
+        
+                animation: slide-animation 12s infinite;
+            }
+        
+            .carousel-slide img {
+                width: 20%;
+                margin-left: 10rem;
+                height: auto;
+                flex-shrink: 0;
+                object-fit: cover;
+                border-radius: 8px;
+            }
+        
+            @keyframes slide-animation {
+                0% { transform: translateX(0); }
+                33% { transform: translateX(-35%); }
+                66% { transform: translateX(-65%); }
+                80%{ transform: translateX(0); }
+            }
+        
+            
+        
+                    
 
         </style>
         
@@ -55,8 +125,19 @@
     
      <section id="skewered_foods">
 
+        
         <div class="image-container3">
-            
+            <div class="top-image">
+                <div class="carousel-overlay">
+                        <div class="carousel">
+                            <div class="carousel-slide">
+                                <img src="./images/food-menu-skewered/Group 47.png" alt="Slide 1">
+                                <img src="./images/food-menu-skewered/Group 48.png" alt="Slide 2">
+                                <img src="./images/food-menu-skewered/Group 50.png" alt="Slide 3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             <div class="image-wrapper">
                 <img src="./images/Product (Isaw).png" alt="bg" class="background-image">
                 <div class="seemore">SEE MORE</div>
