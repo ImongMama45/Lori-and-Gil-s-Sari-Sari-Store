@@ -17,84 +17,392 @@
     }
 
 
-    header {
-        background-color: #16534B;
+    /* SKEWERED FOODS MENU */
+
+.image-container3 { 
+    display: flex; 
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10% ;
+    
+}
+
+.image-wrapper2 {
+    position: relative; /* Position relative for the wrapper */
+}
+
+
+.skewered_foods {
+    position: relative; /* Position absolute for the text */
+    top: 185%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for text size */
+    width: 50;
+    color: #ffffff; /* Text color */
+    padding: 1px; /* Padding around the text */
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 4rem; /* Font size */
+    font-family: 'Koulen', sans-serif; /* Use the Koulen font */
+    text-align: center; /* Center text */
+}
+
+
+.seemore-button {
+    position: absolute; /* Position absolute for the text */ 
+    transform: translate(-50%, -50%); /* Adjust for text size */
+    display: inline-block;
+    text-decoration: none;
+    top: 90%; 
+    left: 15%; 
+    color: #ffffff; /* Text color */
+    background-color: #16534B; /* Semi-transparent background */
+    padding: 1px; /* Padding around the text */
+    padding-left: 20px;
+    padding-right: 20px;;
+    font-size: 3rem; /* Use rem for responsive font size */
+    font-family: 'Koulen', sans-serif; 
+    text-align: center; 
+    z-index: 2; /* Add this line */
+    
+}
+
+.bestseller {
+    position: absolute; /* Position absolute for the text */ 
+    transform: translate(-50%, -50%); /* Adjust for text size */
+    display: inline-block;
+    text-decoration: none;
+    top: 10%; 
+    left: 15%; 
+    color:  #16534B; /* Text color */
+    background-color: #d4d700; /* Semi-transparent background */
+    padding: 1px; /* Padding around the text */
+    padding-left: 20px;
+    padding-right: 20px;;
+    font-size: 3rem; /* Use rem for responsive font size */
+    font-family: 'Koulen', sans-serif; 
+    text-align: center; 
+    
+}
+
+.image-wrapper {
+        position: relative; /* Ensure the wrapper is positioned relative */
+        width: 100%; /* Ensure it takes full width */
+        height: auto; /* Allow height to adjust based on content */
     }
-        /* Base styles for the top image */
-    .top-image {
-        position: relative;
-        display: flex;
-        width: 100%;
-        height: 30%;
-        overflow: hidden;
+
+    .slideshow-container {
+        position: absolute; /* Position absolute for overlay effect */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        display: flex; /* Use flexbox to center */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        z-index: 1; /* Ensure it appears above the image */
     }
+
+    .mySlides {
+        display: none;
+        max-width: 100%; /* Ensure images are responsive */
+        margin: auto; /* Center images */
+        z-index: 2; /* Ensure slides are above the background */
+    }
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: #16534B;
+    transform: translateY(-50%); /* Center vertically */
+}
+
+.next {
+    right: 60px; /* Adjust position */
+    border-radius: 30px;
+}
+
+.prev {
+    left: 60px; /* Adjust position */
+    border-radius: 30px;
+}
+
+.prev:hover, .next:hover {
+    background-color: #16534B;
+}
+
+.product1, .prev, .next {
+    transition: transform 0.2s; 
+}
+
+.product1:hover, .prev:hover, .next:hover   {
+    transform: scale(1.1); 
+} 
+
+
+
+
+
+@media (max-width: 1024px) {
+    .seemore-button {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+        top: 85%; /* Adjust position for smaller screens */
+    }
+
+    .skewered_foods {
+        font-size: 3rem; /* Adjust font size for smaller screens */
+        top: 85%; /* Adjust position for smaller screens */
+    }
+
+    .image-container4 img {
+        width: 30%; /* Make images responsive */
+        margin: 5% 0; /* Add margin for spacing */
+    }
+
+    .image-container4 img {
+        width: 30%; /* Make images responsive */
+        margin: 5% 0; /* Add margin for spacing */
+    }
+
+    .prev{
+        padding: 10px; /* Further reduce padding */
+        font-size: 10px; /* Smaller font size */
+        left: 45px;
+    }
+
+    .next {
+        padding: 10px; /* Further reduce padding */
+        font-size: 10px; /* Smaller font size */
+        right: 35px;
+    }
+}
+
+@media (max-width: 1020px) {
+    
+
+    .seemore-button{
+        font-size: 2rem; /* Smaller font size for tablets */
+        top: 85%; /* Adjust position for smaller screens */
+    }
+
+    .skewered_foods {
+        font-size: 2.5rem; /* Smaller font size for tablets */
+        top: 80%; /* Adjust position for smaller screens */
+    }
+    
+    .image-container4 img {
+        width: 20%; /* Make images responsive */
+        margin: 5% 0; /* Add margin for spacing */
+    }
+    .slideshow-container img {
+        width:  70%; /* Make images responsive */
+        margin: 5% 0; /* Add margin for spacing */
+    }
+
+    .bestseller {
+        font-size: 2rem; /* Smaller font size for mobile */
+        top: 10%; /* Adjust position for smaller screens */
+    }
+
+    .prev{
+        padding: 20px; /* Further reduce padding */
+        font-size: 20px; /* Smaller font size */
+        left: 45px;
+    }
+
+    .next {
+        padding: 20px; /* Further reduce padding */
+        font-size: 20px; /* Smaller font size */
+        right: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    
+
+    .seemore-button{
+        font-size: 2rem; /* Smaller font size for tablets */
+        top: 85%; /* Adjust position for smaller screens */
+    }
+
+    .skewered_foods {
+        font-size: 2.5rem; /* Smaller font size for tablets */
+        top: 80%; /* Adjust position for smaller screens */
+    }
+    
+    .image-container4 img {
+        width: 20%; /* Make images responsive */
+        margin: 5% 0; /* Add margin for spacing */
+    }
+    .slideshow-container img {
+        width:  60%; /* Make images responsive */
+        margin: 5% 0; /* Add margin for spacing */
+    }
+
+    .bestseller {
+        font-size: 2rem; /* Smaller font size for mobile */
+        top: 10%; /* Adjust position for smaller screens */
+    }
+
+    .prev{
+        padding: 20px; /* Further reduce padding */
+        font-size: 20px; /* Smaller font size */
+        left: 45px;
+    }
+
+    .next {
+        padding: 20px; /* Further reduce padding */
+        font-size: 20px; /* Smaller font size */
+        right: 35px;
+    }
+}
+
+@media (max-width: 668px) {
+    .seemore-button {
+        font-size: 1rem; /* Even smaller font size for mobile */
+        top:80%; /* Further adjust position */
+    }
+
+    .skewered_foods {
+        font-size: 1.5rem; /* Even smaller font size for mobile */
+        top: 90%; /* Further adjust position */
+    }
+
+    .image-container4 img {
+        width: 30%; /* Make images responsive */
+        margin: 5% ; /* Add margin for spacing */
+    }
+
+    .slideshow-container img {
+        width: 60%; /* Make images responsive */
+        margin: 5% 0; /* Add margin for spacing */
+    }
+
+    .bestseller {
+        font-size: 1rem; /* Smaller font size for mobile */
+        top: 10%; /* Adjust position for smaller screens */
+    }
+
+    .prev{
+        padding: 10px; /* Further reduce padding */
+        font-size: 10px; /* Smaller font size */
+        left: 40px;
+    }
+
+    .next {
+        padding: 10px; /* Further reduce padding */
+        font-size: 10px; /* Smaller font size */
+        right: 30px;
+    }
+}
+
+
+@media (max-width: 508px) {
+    .seemore-button {
+        font-size: 1rem; /* Even smaller font size for mobile */
+        top:80%; /* Further adjust position */
+    }
+
+    .skewered_foods {
+        font-size: 1.5rem; /* Even smaller font size for mobile */
+        top: 90%; /* Further adjust position */
+    }
+
+    .image-container4 img {
+        width: 30%; /* Make images responsive */
+        margin: 5% ; /* Add margin for spacing */
+    }
+
+    .slideshow-container img {
+        width: 60%; /* Make images responsive */
+        margin: 5% 0; /* Add margin for spacing */
+    }
+
+    .bestseller {
+        font-size: 1rem; /* Smaller font size for mobile */
+        top: 10%; /* Adjust position for smaller screens */
+    }
+
+    .prev{
+        padding: 10px; /* Further reduce padding */
+        font-size: 10px; /* Smaller font size */
+        left: 40px;
+    }
+
+    .next {
+        padding: 10px; /* Further reduce padding */
+        font-size: 10px; /* Smaller font size */
+        right: 30px;
+    }
+}
+
 
     
 
-        
-    .top-image {
-        position: relative;
+
+@media (max-width: 480px) {
+    .seemore-button {
+        font-size: 1rem; /* Even smaller font size for mobile */
+        top:80%; /* Further adjust position */
     }
 
-    .top-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+    .skewered_foods {
+        font-size: 1.5rem; /* Even smaller font size for mobile */
+        top: 90%; /* Further adjust position */
     }
 
-    /* Carousel Overlay */
-    .carousel-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 10;
-        pointer-events: none;
+    .image-container4 img {
+        width: 30%; /* Make images responsive */
+        margin: 5% ; /* Add margin for spacing */
     }
 
-    /* Carousel Container */
-    .carousel {
-        width: 80%; 
-        height: 80%; 
-        overflow: hidden;
-        position: relative;
+    .slideshow-container img {
+        width: 60%; /* Make images responsive */
+        margin: 5% 0; /* Add margin for spacing */
     }
 
-    /* Carousel Slides */
-    .carousel-slide {
-        display: flex;
-        width: 300%;
-
-        animation: slide-animation 12s infinite;
+    .bestseller {
+        font-size: 1rem; /* Smaller font size for mobile */
+        top: 10%; /* Adjust position for smaller screens */
     }
 
-    .carousel-slide img {
-        width: 20%;
-        margin-left: 10rem;
-        height: auto;
-        flex-shrink: 0;
-        object-fit: cover;
-        border-radius: 8px;
+    .prev{
+        padding: 10px; /* Further reduce padding */
+        font-size: 10px; /* Smaller font size */
+        left: 40px;
     }
 
-    @keyframes slide-animation {
-        0% { transform: translateX(0); }
-        33% { transform: translateX(-35%); }
-        66% { transform: translateX(-65%); }
-        80%{ transform: translateX(0); }
+    .next {
+        padding: 10px; /* Further reduce padding */
+        font-size: 10px; /* Smaller font size */
+        right: 30px;
     }
+}
 
-    
 </style>
 <body>
     <!-- COPY THIS TO YOUR PAGESSSSSSS PARA SA Navigation   BAR NATIN -->
      <!-- SIMULA DITO  -->
 
      <header>
+
+        <style>
+            header {
+    background-color: #16534B;
+}
+
+
+        </style>
         
         <nav>
             <ul class="navbar">
@@ -121,41 +429,51 @@
     
      <section id="skewered_foods">
 
-        
         <div class="image-container3">
-            <div class="top-image">
-                <div class="carousel-overlay">
-                        <div class="carousel">
-                            <div class="carousel-slide">
-                                <img src="./images/food-menu-skewered/Group 47.png" alt="Slide 1">
-                                <img src="./images/food-menu-skewered/Group 48.png" alt="Slide 2">
-                                <img src="./images/food-menu-skewered/Group 50.png" alt="Slide 3">
-                            </div>
-                        </div>
-                    </div>
-                </div>
             <div class="image-wrapper">
-                <img src="./images/Product (Isaw).png" alt="bg" class="background-image">
-                <div class="seemore">SEE MORE</div>
+                <img src="./images/Product (Isaw).png" alt="Product 1" class="background-image">
+                <div class="seemore"> 
+                    <a href="#skewered_foods2" class="seemore-button"> SEE MORE</a>
+                </div>
+                <div class="bestseller"> BEST SELLER</a>
+                </div>
+                
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <img src="./images/Group 47.png" alt="Product 2" class="background-image">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="./images/Group 48.png" alt="Product 3" class="background-image">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="./images/Group 49.png" alt="Product 4" class="background-image">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="./images/Group 50.png" alt="Product 5" class="background-image">
+                    </div>
+
+                    <!-- Add more slides as needed -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
                 
             </div>
-
         </div>
         
         <div class="image-container4">
-            <div class="skewered_foods">SKEWERED FOODS</div>
+            <div id="skewered_foods2" class="skewered_foods">SKEWERED FOODS</div>
             
             <img src="./images/hotdog.png" alt="hotdog" class = "product1">
-            <img src="./images/chami.png" alt="chami" class = "product2">
-            <img src="./images/kikiam.png" alt="kikiam" class = "product3">
-            <img src="./images/tokneneng.png" alt="tokneneng" class = "product4">
-            <img src="./images/bananaque.png" alt="bananaque" class = "product5">
-            <img src="./images/lumpia.png" alt="lumpia" class = "product6">
-            <img src="./images/tokwa.png" alt="tokwa" class = "product7">
-            <img src="./images/fishball.png" alt="fishball" class = "product8">
-            <img src="./images/squidball.png" alt="squidball" class = "product9">
-            <img src="./images/kwekwek.png" alt="kwekwek" class = "product10">
-            <img src="./images/siomai.png" alt="siomai" class = "product11">
+            <img src="./images/chami.png" alt="chami" class = "product1">
+            <img src="./images/kikiam.png" alt="kikiam" class = "product1">
+            <img src="./images/tokneneng.png" alt="tokneneng" class = "product1">
+            <img src="./images/bananaque.png" alt="bananaque" class = "product1">
+            <img src="./images/lumpia.png" alt="lumpia" class = "product1">
+            <img src="./images/tokwa.png" alt="tokwa" class = "product1">
+            <img src="./images/fishball.png" alt="fishball" class = "product1">
+            <img src="./images/squidball.png" alt="squidball" class = "product1">
+            <img src="./images/kwekwek.png" alt="kwekwek" class = "product1">
+            <img src="./images/siomai.png" alt="siomai" class = "product1">
             <img src="./images/bihon.png" alt="bihon" class = "product1">
 
 
@@ -163,5 +481,35 @@
 
     </section>
 
+    <script>
+        let slideIndex = 1; // Start from the first slide
+showSlides(slideIndex); // Show the first slide
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    slides[slideIndex - 1].style.display = "block";  
+}
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+        
+        function showSlidesManually() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slides[slideIndex - 1].style.display = "block";  
+        }
+        </script>
+
 </body>
 </html>
+
