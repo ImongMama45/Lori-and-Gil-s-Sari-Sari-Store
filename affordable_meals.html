@@ -456,3 +456,469 @@
 
 </body>
 </html>
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+#KANIN NGA PO....
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>affordable meals | Products | Promotional Food Website</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      
+            
+            /* Navbar */
+            header{
+                background-color: #002f6c;
+                z-index: 100;
+               
+                box-shadow: 0 4px 6px rgba(-50, 0, 0, 0.2); /* Adds a shadow */
+             ;
+            }
+
+            .navbar .dropdown{
+                background-color: #002f6c;
+                box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+            }
+
+            .navbar .menu{
+                background-color: #002f6c;
+                z-index: 10;
+            }
+
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: #002f6c;
+                padding: 10px 20px;
+                color: white;
+            }
+
+
+            
+            .menu {
+                background-color: #002f6c;
+            }
+
+            .menu .dropdown{
+                background-color: #002f6c;
+                box-shadow: 5px 4px 6px rgba(0, 0, 0, 0.2); /* Adds a shadow */
+            }   
+
+            .hero {
+                position: relative;
+                display: flex;
+                width: 100%;
+                height: 30%;
+                overflow: hidden;
+            }
+
+
+            /* Hero Section */
+            .hero {
+                position: relative;
+                display: flex;
+                width: auto;
+                
+                height: 80vh;
+                background: url("background.jpg") center/cover no-repeat;
+            }
+
+            .hero img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            
+            .hero .arrow {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 30px;
+                color: white;
+                cursor: pointer;
+            }
+
+
+                      
+            .see-more {
+                position: absolute; /* Position it absolutely within the relative parent */
+                display: flex;
+                padding: 1rem 1rem;
+                top: 80%; 
+                left: 5%;
+                z-index: 5;
+             
+            }
+
+            .see-more a{
+                font-size: 50px;
+            }
+
+
+            .see-more-button {
+                display: inline-block;
+                background-color: #ffeb3b;
+                color: #000000;
+                text-decoration: none;
+                border: none;
+                border-radius: 5px;
+                font-size: 1rem;
+                cursor: pointer;
+                padding: 10px 30px;
+                font-weight: bold;
+                font-size: 25px;
+                text-transform: uppercase;
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                transition: background-color 0.1s ease;
+
+            }
+
+
+
+
+
+
+            .see-more-button:hover {
+            background-color: #874c14; /* Darker matte brown */
+            }
+
+
+
+            .Meals_BG{
+                background: url("wooden.jpeg") center/cover no-repeat;
+                background-color: #915527;
+                width: 100%;
+                position: relative;
+                display: flexbox;
+            }
+            
+            .hero .arrow.left {
+                left: 10px;
+            }
+            
+            .hero .arrow.right {
+                right: 10px;
+            }
+                
+            /* Carousel Overlay */
+            .carousel-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 10;
+                pointer-events: none;
+            }
+
+            /* Carousel Container */
+            .carousel {
+                width: 80%; 
+                height: 80%; 
+                overflow: hidden;
+                position: relative;
+            }
+
+            /* Carousel Slides */
+            .carousel-slide {
+                display: flex;
+                width: 300%;
+
+                animation: slide-animation 12s infinite;
+            }
+
+            .carousel-slide img {
+                width: 20%;
+                margin-left: 10rem;
+                height: auto;
+                flex-shrink: 0;
+                object-fit: cover;
+                border-radius: 8px;
+            }
+
+            @keyframes slide-animation {
+                0% { transform: translateX(0); }
+                33% { transform: translateX(-35%); }
+                66% { transform: translateX(-65%); }
+                80%{ transform: translateX(0); }
+            }
+
+                        
+            .wooden-section {
+                margin-top: 10%;
+                padding: 20px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+                overflow: visible; /* Ensure all child elements are visible */
+                }
+
+            .menu-item:first-child {
+                margin-top: 20px; /* Ensure spacing for the first item */
+            }
+
+
+            .menu-item {
+                background-color: #fff;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                margin-top: 20px;
+                margin: 40px;
+                padding: 20px; /* Increased space between menu items */ /* Increased padding inside each menu item */
+                text-align: center; /* Center-aligns text and images */
+                text-align: center;
+                width: 250px;
+                height: 350px; /* Fixed height for uniformity */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between; /* Distribute space evenly */
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+                transition: transform 0.2s;
+            }
+
+            .menu-item:hover {
+            transform: translateY(-5px);
+            }
+
+            .menu-image {
+                width: 100%; /* Ensures images are responsive */
+                height: auto; /* Maintains aspect ratio */
+                margin-bottom: px; /* Space between image and text */
+            }
+
+
+            .menu-image img {
+                width: 100%; /* Fill the container width */
+                height: 100%; 
+                width: auto;/* Fixed height for uniform size */
+                object-fit: cover; /* Maintain aspect ratio and crop excess */
+                border-radius: 5px; /* Optional: rounded corners */
+            }
+            .price {
+                font-weight: bold; /* Makes the price bold */
+                color: #d19a6a; /* Color for the price text */
+                font-size: 1.2rem; /* Slightly larger font for price */
+            }
+
+            @media (max-width: 768px) {
+                .see-more-button {
+                    border-radius: 5px;
+                    font-size: 1rem;
+                    padding: 5px 5px;
+                    font-weight: bold;
+        
+                }
+
+                .see-more {
+                    padding: 1rem 1rem;
+                    top: 80%; 
+                    left: 5%;
+                    z-index: 5;
+                
+                }
+
+                .see-more a{
+                    font-size: 40px;
+                }    
+            }
+
+
+            @media (max-width: 375px) {
+                    
+
+                .hero {
+                    width: auto;
+                    height: 50vh;
+                }
+
+                .carousel-slide{
+                    margin-top: 30%;
+                    display: flex;
+                    width: 300%;
+                }
+
+                .carousel-slide img {
+                    width: 24%;
+                    margin-left: 10rem;
+                }
+
+                .see-more-button {
+                    border-radius: 5px;
+                    font-size: 1rem;
+                    padding: 5px 5px;
+                    font-weight: bold;
+        
+                }
+
+                .see-more {
+                    padding: 1rem 1rem;
+                    top: 80%; 
+                    left: 5%;
+                    z-index: 100;
+                
+                }
+
+                .see-more a{
+                    font-size: 20px;
+                }    
+                
+                
+            }
+
+                        
+                        
+
+    </style>
+</head>
+<body>
+    <!-- COPY THIS TO YOUR PAGESSSSSSS PARA SA Navigation BAR NATIN -->
+     <!-- SIMULA DITO  -->
+
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li class="logo"><a href="#"><img src="Logo.png" alt="logo"></a></li>
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label for="menu-toggle" class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </label>
+                <span class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li>
+                        <a href="products.html" id="products-menu" class="active">Products</a>
+                        <ul class="dropdown">
+                            <li><a href="skewered_foods.html">Skewered Foods</a></li>
+                            <li><a href="bread_and_pastries.html">Bread And Pastries</a></li>
+                            <li><a href="affordable_meals.html">Affordable Meals</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>   
+                </span>
+                <li><a href="signup.html" class="signup-btn">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+     <!-- HANGGANG DITO -->
+
+    <main>
+        <section class="Meals_BG">
+        
+                <!-- Hero Section -->
+            
+
+            <div class="top-image">
+                <div class="hero">
+                    <div class="see-more">
+                        <a href="#wooden-section" class="see-more-button">Show More &#8250;</a>
+                    </div>
+                    <div class="carousel-overlay">
+                        <div class="carousel">
+                            <div class="carousel-slide">
+                                <img src="ginataangbaboy-removebg-preview.png" alt="Slide 1">
+                                <img src="giniling-removebg-preview.png" alt="Slide 2">
+                                <img src="lugaw-removebg-preview.png" alt="Slide 3">
+                                <img src="friedchicken1-removebg-preview.png" alt="Slide 4">
+                            </div>
+                        </div>
+                    </div>
+                    <span class="arrow left">&#8249;</span>
+                    <span class="arrow right">&#8250;</span>
+                </div>
+            </div>
+
+            
+            <section class="wooden-section" id="menu-section">
+                <div class="menu-item">
+                    <img src="ginataangbaboy.png" alt="Food 1" class="menu-image"> <!-- Replace with actual image path -->
+                    <h3>Ginataang Baboy</h3>
+                    <p class="price">P50</p>
+                </div>
+                <div class="menu-item">
+                    <img src="giniling.png" alt="Food 2" class="menu-image"> <!-- Replace with actual image path -->
+                    <h3>Giniling</h3>
+                    <p class="price">P50</p>
+                </div>
+                <div class="menu-item">
+                    <img src="ampalaya.png" alt="Food 3" class="menu-image"> <!-- Replace with actual image path -->
+                    <h3>Ampalaya</h3>
+                    <p class="price">P30</p>
+                </div>
+                <div class="menu-item">
+                    <img src="ginataang ubod.png" alt="Food 4" class="menu-image"> <!-- Replace with actual image path -->
+                    <h3>Ginataang Ubod</h3>
+                    <p class="price">P30</p>
+                </div>
+                <div class="menu-item">
+                    <img src="friedchicken.png" alt="Food 5" class="menu-image"> <!-- Replace with actual image path -->
+                    <h3>Fried Chicken</h3>
+                    <p class="price">P30</p>
+                </div>
+                <div class="menu-item">
+                    <img src="sisig.png" alt="Food 6" class="menu-image"> <!-- Replace with actual image path -->
+                    <h3>Sisig</h3>
+                    <p class="price">P50</p>
+                </div>
+                <div class="menu-item">
+                    <img src="lechon paksiw.png" alt="Food 7" class="menu-image"> <!-- Replace with actual image path -->
+                    <h3>Lechon Paksiw</h3>
+                    <p class="price">P50</p>
+                </div>
+                <div class="menu-item">
+                    <img src="crispy inalamangan.png" alt="Food 8" class="menu-image"> <!-- Replace with actual image path -->
+                    <h3>Crispy Inalamangan</h3>
+                    <p class="price">P50</p>
+                </div>
+                <div class="menu-item">
+                    <img src="porkchop.png" alt="Food 9" class="menu-image"> <!-- Replace with actual image path -->
+                    <h3>Porkchop</h3>
+                    <p class="price">P50</p>
+                </div>
+                <div class="menu-item">
+                    <img src="omelet.png" alt="Food 10" class="menu-image"> <!-- Replace with actual image path -->
+                    <h3>Omelet</h3>
+                    <p class="price">P30</p>
+                </div>
+                <div class="menu-item">
+                    <img src="hotdog.png" alt="Food 11" class="menu-image"> <!-- Replace with actual image path -->
+                    <h3>Hotdog</h3>
+                    <p class="price">P40</p>
+                </div>
+                <div class="menu-item">
+                    <img src="fantastic longganisa.png" alt="Food 12" class="menu-image"> <!-- Replace with actual image path -->
+                    <h3>Fantastic Longganisa</h3>
+                        <h3>Food 12</h3>
+                        <p class="price">P30</p>
+                    </div>
+            </section>
+        </section>
+    </main>
+    <footer>    
+        <p>&copy; 2024 Lori & Gil's Sari-Sari Store. All rights reserved.</p>
+    </footer>
+        
+
+</body>
+</html>
