@@ -13,6 +13,94 @@
             z-index:50:
         }
 
+        
+/* General container for the about-us section */
+.about-us {
+    text-align: center;
+    padding: 50px 20px; /* Adjust padding for content space */
+    box-sizing: border-box;
+    background-color: #0c0c0c;
+}
+
+/* SVG for curved text */
+.curved-svg {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: -40px; /* Reduced space between text and image */
+    width: 90%; /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 500px; /* Limit the maximum width */
+}
+
+/* Curved Text styling */
+.curved-text {
+    font-size: 40px; /* Base font size */
+    letter-spacing: 15px; /* Adjust the letter spacing */
+    fill: #e6b800; /* Text color */
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    text-anchor: middle; /* Horizontally center the text */
+}
+
+
+/* Semi-circle image container */
+.store-image {
+    width: 300px; /* Set a fixed width for the semi-circle */
+    height: auto; /* Set a fixed height */
+    margin: 0 auto 0 auto; /* Bring the image closer */
+    border-radius: 150px 150px 0 0; /* Creates the semi-circle shape */
+    position: relative; /* Keeps the image in the normal document flow */
+    display: flex;
+    overflow: hidden; /* Ensures only the semi-circle is visible */
+}
+
+/* Image inside the semi-circle */
+.store-image img {
+    width: 100%; /* Image fills the container */
+    height: auto; /* Maintain the aspect ratio */
+    object-fit: cover; /* Ensures the image scales properly */
+    display: block; /* Prevents extra space below the image */
+    object-position: top; /* Aligns the top part of the image with the curve */
+    margin-top: 0; /* No extra margin needed */
+}
+
+
+
+/* Lines below the image */
+.lines {
+    margin: 10px 0;
+}
+
+.line {
+    width: 50%;
+    border: 1px solid #e6b800;
+    margin: 10px auto;
+}
+
+/* About text */
+.about-text {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #ddd;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+/* Side images */
+.side-images {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.side-images img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+}
+
             
     /* Form styling */
     
