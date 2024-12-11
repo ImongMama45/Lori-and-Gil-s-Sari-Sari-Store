@@ -7,7 +7,7 @@
   PARA SAME MARGINS AND PADDINGS FOR ALL */
 
 
-* {
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -105,17 +105,18 @@ header {
 }
 
 /* Sign-up button styling */
-.navbar li a.signup-btn {
+.navbar .Signup-bt {
     color: #0c0c0c;
     background-color: #d4d700;
     padding: 0.5rem 1rem;
     border-radius: 2px;
+    font-size: large;
+    font-weight: bold;
 }
 
-.signup-btn {
+.Signup-bt {
     z-index: 10; /* Lower z-index compared to .hamburger */
     position: relative;
-    margin-left: auto;
 }
 
 /* Dropdown menu styling */
@@ -166,6 +167,350 @@ header {
     position: relative; /* Position relative to show dropdown */
 }
 
+
+
+
+
+.Popup-Signup {
+    position: fixed; 
+    display: flex;
+    visibility: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.25);
+    width: 400px;
+    height: 500px;
+    padding: 20px 30px;
+    background: url("./images/image1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    z-index: 120; 
+    transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 0ms;
+}
+
+.Popup-Signup {
+    align-self: center;
+    opacity:0;
+}
+
+
+.Popup-Signup.active{
+    display: flex; /* Ensures it shows flexibly */
+    top: 50%;
+    opacity: 1;  
+    visibility: visible; 
+    transform: translate(-50%, -50%) scale(1);
+    transition: top 0ms ease-in-out 0ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 200ms ease-in-out 0ms;
+}
+.Popup-Signup .close-button{
+    position: absolute;
+    top:10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    background: rgb(234, 222, 222);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    z-index: 5;
+    line-height: 15px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+
+.Popup-Signup::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    z-index: 1;
+}
+
+
+
+.Popup-Signup .Signup-items {
+    color: white;
+    position: relative; 
+    z-index: 3; 
+    margin: 1px 1px;
+
+}
+
+
+.Popup-Signup .Signup-items label {
+    color: white;
+    box-shadow: white;
+    font-size: 20px;
+
+}
+
+.Popup-Signup .Signup-items input{
+    width: 320px;
+    height: 30px;
+    margin: 10px;
+}
+
+.Popup-Signup .Signup-form .Signup-items a{
+    align-items: center;
+    text-align: center;
+    margin-left: 1%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    font-weight: 100;
+    color: #51a3fa;;
+    font-weight: 10;
+    margin-left: 1%;
+}
+
+
+.Popup-Signup .Signup-form .Signup-items p{
+    align-items: center;
+    margin-left: 15%;
+    padding-bottom: 5%;
+    padding-top: 2%;
+    font-weight: 100;
+
+}
+
+
+
+.Popup-Signup .Signup-form h1{
+    position: relative;
+    z-index: 5;
+    font-size: 25px;
+    text-align: center;
+    padding: 1%;
+    margin-top: 2%;
+}
+
+.Popup-Signup .Signup-form .Signup-items input[type="checkbox"]{
+    position: relative;
+    width: 10px;
+    height: auto;
+    text-indent: 10%;
+    margin-left: 50%;
+    margin-right: 0px;
+}
+
+
+
+.Popup-Signup .Signup-form .Signup-items button{
+    position: relative;
+    margin-top: 10px;
+    width: 100%;
+    height: 30px;
+    align-items: center;
+    text-align: center;
+    box-shadow: black;
+    background: #fbff25;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all;
+    transition: transform 0.2s;
+    margin-bottom: 10px;
+}
+
+.Popup-Signup .Signup-form .Signup-items button:hover{
+    background-color: #9b7d07d7;
+    transform: translateY(2px);
+}
+
+    /* SIGN UP AND LOGINS */
+
+
+
+.Signup-bt:checked + .Popup{
+    display: block;
+}
+
+.Popup {
+    position: fixed; 
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.25);
+    width: 360px;
+    padding: 20px 30px;
+    background: url("./images/image1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    z-index: 1; 
+    transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 0ms;
+}
+
+.Popup {
+    align-self: center;
+    opacity:0;
+}
+
+
+.Popup.active{
+    display: flex; /* Ensures it shows flexibly */
+    top: 50%;
+    opacity: 1; 
+    z-index: 120;  
+    transform: translate(-50%, -50%) scale(1);
+    transition: top 0ms ease-in-out 0ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 200ms ease-in-out 0ms;
+}
+.Popup .close-button{
+    position: absolute;
+    top:10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    background: rgb(234, 222, 222);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    z-index: 5;
+    line-height: 15px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+
+.Popup::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    z-index: 1;
+}
+
+
+.Popup .Login-form h1{
+    z-index: 20;
+    font-size: 50px;
+    text-align: center;
+    padding: 10%;
+    position: relative;
+}
+
+.Popup .Login-form .Login-items input[type="checkbox"]{
+    text-indent: 10%;
+    margin-left: -15%;
+    margin-right: -120px;
+}
+
+
+
+.Popup .Login-form .Login-items button{
+    margin-top: 10px;
+    width: 100%;
+    height: 30px;
+    align-items: center;
+    text-align: center;
+    box-shadow: black;
+    background: #fbff25;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all;
+    transition: transform 0.2s;
+    margin-bottom: 10px;
+}
+
+.Popup .Login-form .Login-items button:hover{
+    background-color: #9b7d07d7;
+    transform: translateY(2px);
+}
+
+
+.Popup .Login-items {
+    color: white;
+    position: relative; 
+    z-index: 3; 
+    margin: 10px 10px;
+
+}
+
+.Popup .Login-items label {
+    color: white;
+    box-shadow: white;
+    
+}
+
+.Popup .Login-form .Login-items a, p{
+    align-items: center;
+    margin-left: 1%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    font-weight: 100;
+
+}
+
+.Popup .Login-form .Login-items a{
+    color: #51a3fa;
+}
+
+
+/* Popup Overlay */
+.overlay {
+    position: fixed;
+    display: none;
+    margin: 0px 0px;
+    background: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+    padding: 60px 20px; /* Add padding to create space from top */
+    width: 100%;
+
+    transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 0ms;
+}
+
+.overlay.active {
+    visibility:initial;
+    display: block;
+    opacity: 1;
+    position: fixed;/* Ensures it shows flexibly */
+    top: 50%;
+    opacity: 1;  
+    z-index: 100; 
+    transform: translate(50%, 50%) scale(10);
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /* 
   __  __  ______  __    __  __    __
  |  \/  ||  ____||  \  |  ||  |  |  |
@@ -207,38 +552,6 @@ header {
     
 }
 
-/* Overlay styling */
-.overlay {
-    display: none; /* Hide by default */
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Darken the background */
-    z-index: 14; /* Ensure it’s on top of other elements */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ANDITO YUNG FOR PAGES KARAMIHAN DITO AY MGA 
             IEEDIT NINYO FOR PAGES
@@ -262,422 +575,62 @@ section {
 }
 
 /* Home Section */
-#home {
-    position: relative; /* Set this to relative */
-    display: flex;
-    background: url("./images/Background Home.jpg") no-repeat center center/cover;
-    color: #fff; /* White text for contrast */
-    padding: 3rem 1rem;
-    text-align: center;
-    height: 150vh; /* Full viewport height for a banner effect */
-    mix-blend-mode: multiply;
-    overflow: hidden;
-    z-index: 0;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Overlay for better text contrast */
-#home::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-}
-
-
- 
-#logo-home img {
-    position: relative;
-    width: 100%; /* Make the logo responsive */
-    top: 15%;
-    right: 50%;
-    max-width: 600px;
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 20%; /* Add some spacing to the right of the logo */
-    z-index: 90;
-}
-
-/* Content over background */
-#home .content {
-    position: relative; /* Ensure it is positioned relative to #home */
-    display: flex; /* Use flexbox layout */
-    align-items: center; /* Center items vertically */
-    justify-content: left; /* Space out logo and text content */
-    z-index: 2; /* Ensure it is above the overlay */
-    text-align: center; /* Align text to the left */
-    flex-direction: column;
-    top: 200px;
-    max-width: 600px;
-    width: 80%; /* Adjust width as needed */
-    margin: 0 auto; /* Center the content */
-    padding: 3rem 1rem; /* Add padding for spacing */
-}
-
-
-
-/* Heading and Description */
-#home h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-#home p {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-}
-/* Button Styling */
-#home_button {
-    display: inline-block; /* Ensure it's a block-level element */
-    padding: 0.8rem 1.5rem;
-    background-color: #d4d700;
-    color: #0c0c0c;
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: 5px;
-    text-decoration: none; /* Ensure it's styled as a link */
-    position: relative; /* Allow positioning */
-    z-index: 3; /* Ensure it is above the overlay */
-    margin-top: 2rem; /* Add some space above the button */
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-#home_button:hover {
-    background-color: #c6c300;
-    transform: scale(1.05); /* Slightly scale up on hover */
-    z-index: 4; /* Ensure it remains on top when hovered */
-}
-
-/* Menu Categories */
-.menu-categories {
-    position: absolute;
-    top: 100%;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    column-gap: 10rem;
-    z-index: 20;
-    
-}
-
-.menu-categories a {
-    font-size: 1.5frem;
-    color: #fff;
-    text-decoration: none;
-    text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.7);
-}
-
-.menu-categories a:hover {
-    text-decoration: underline;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Log In */
-
-
-.sign_up_container {
-    background: url("./images/image1.png") center no-repeat;
-    background-size: 200%;
-    position: relative;
-    display: flex;
-    width: 100%;
-    height: auto;
-    overflow-x: hidden;
-    padding: 0rem 0;
-}
-
-.sign_up_container .login-container {
-    position: relative;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    
-}
-
-.sign_up_container .login-container .login-box {
-    position: relative;
-    margin-bottom: 50%;
-}
-
-.sign_up_container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100vh;
-}
-
-
-.login-container {
+body {
     font-family: Arial, sans-serif;
-    color: white;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+}
+
+.navbar {
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin-top: 100%;
-}
-
-.login-container .login-box {
-    position: relative;
-    display: flex;
-    margin-top: auto;
-}
-
-.login-container .login-box form {
-    width: 100%;
-}
-
-.login-container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: -1;
-}
-
-.login-container {
-    border-radius: 10px;
-    padding: 10px;
-    text-align: center;
-    width: 80%;
-    height: 300px;
-    position: relative;
-    margin-top: 0px;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-}
-
-.login-box {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 10px;
-    padding: 30px;
-    text-align: center;
-    width: 500px;
-    position: relative;
-}
-
-
-#welcome {
-    margin-top: 7%;
-    text-align: center;
-}
-
-.welcome-logo {
-    width: 300px;
-    height: auto;
-}
-
-
-.input-group {
-    margin-bottom: 15px;
-}
-
-.input-group input {
-    width: 100%;
-    height: 40px;
-    padding: 10px;
-    border: none;
-    border-radius: 15px;
-}
-
-
-.login-box h2 {
-    margin-bottom: 20px;
-    color: white;
-}
-
-.input-group {
-    margin-bottom: 15px;
-}
-
-.input-group input {
-    width: 100%;
-    height: 40px;
-    padding: 10px;
-    border: none;
-    border-radius: 15px;
-}
-
-.options {
-    display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
-    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    list-style-type: none;
 }
 
-.login-button {
-    display: inline-block;
-    width: 100%;
-    padding: 10px;
-    text-align: center;
-    background: #553905;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.login-button:hover {
-    background: #002244;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* SIGN UP LOG IN KINEME */
-
-#logo {
-    margin-top: 20%;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.signup-logo {
-    width: 250px;
-    height: auto;
-}
-
-.sign {
-    color: black;
-    font-size: 30px;
-}
-
-.signup-container {
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    width: 500px;
-    height: 400px;
-    position: relative;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-}
-
-.signup-box {
-    margin-top: 40%;
-    background: rgba(255, 255, 255, 0.1);
-    color: #ffffff;
-    backdrop-filter: blur(10px);
-    border-radius: 10px;
-    padding: 30px;
-    text-align: center;
-    width: 100%;
-    height: auto;
-}
-
-.signup-box h2{
-    color: white;
-}
-
-.input-signup {
-    margin-bottom: 15px;
-}
-
-.email {
-    width: 400px;
-    height: 40px;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.password {
-    width: 400px;
-    height: 40px;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.USERNAME {
-    width: 400px;
-    height: 40px;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.signup-button {
-    display: inline-block;
+.navbar .logo img {
     width: 100px;
-    padding: 10px;
-    text-align: center;
-    background: #553905;
-    color: white;
+    height: auto;
+}
+
+.navbar li {
+    list-style-type: none;
+}
+
+.navbar li a {
+    color: #ffffff;
     text-decoration: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    margin-bottom: 10px;
-    margin-left: 30%;
+    padding: 10px;
+    transition: color 0.3s ease;
 }
 
-.make_account_container {
-    background: url("./images/image1.png") center no-repeat;
-    background-size: 200%;
-    position: relative;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+.navbar li a:hover {
+    color: #ffee6a;
 }
 
-
-
-
-
-
+footer {
+    position: absolute;
+    background-color: #f1f1f1; /* Footer background color */
+    text-align: center; /* Centers the text inside the footer */
+    padding: 20px; /* Adds padding inside the footer */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional: shadow for aesthetics */
+    z-index: 1;
+    margin-top: 180vh;
+}
 
 
 /*PRODUCTS MAIN MENU */
@@ -1439,6 +1392,17 @@ h4 {
 /* Responsive Design */
 /* SCREEN SIZES LANG ITO MGA PAR */
 
+/* For tablets and larger screens (768px and above) */
+@media (min-width: 1024px) {
+    section {
+        padding: 3rem 0rem;
+    }
+
+    .navbar {
+        max-width: 1200px;
+        margin: auto;
+    }
+}
 
 @media (max-width: 610px) {
     /* Show the hamburger icon */
@@ -1446,7 +1410,6 @@ h4 {
     #home {
         height: 150vh; /* Full viewport height for a banner effect */
         width: auto;
-        mix-blend-mode: multiply;
         flex-direction: column;
         column-gap: 0;
     }
@@ -1458,9 +1421,6 @@ h4 {
         margin-top: -15rem;
     }
 
-    .signup-btn {
-        order: 1;
-    }
 
     #menu .dropdown {
         display: none;
@@ -1489,9 +1449,9 @@ h4 {
     }
 
     .menu-categories {
-        top: 135%;
+        top: 185%;
         bottom: 10%;
-        left: 50%;;
+        left: 50%;
         justify-content: center;
         gap:2.5rem;
         
@@ -1502,6 +1462,7 @@ h4 {
         color: #fff;
         text-decoration: none;
         text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.7);
+        z-index: 80;
     }
     
     .menu li {
@@ -1516,12 +1477,7 @@ h4 {
         max-width: 80%; /* Further reduce the width */
     }
 
-    .about-content h1 {
-        margin-bottom: 15px; /* Adjust space below heading */
-    }
-    .about-content p {
-        margin-bottom: 10px; /* Space below paragraphs */
-    }
+
 
 
 
@@ -1558,92 +1514,8 @@ h4 {
         overflow: hidden; /* Ensures only the semi-circle is visible */
     }
 
-
-
-   /* Log in and sign in */
-
- 
-    /* login */
-
-    .login-container {
-        margin-right: 25%;
-        margin-left: -25%;
-        width: 80%;
-        margin-top: 100%;
-    }
-
-
-    .make_account_container .signup-container {
-        width: 95%; /* Almost full screen for containers */
-    }
-
-    .options {
-        flex-direction: column; /* Stack options vertically */
-        align-items: center;
-    }
-
-    .options a {
-        margin-bottom: 10px; /* Add spacing between stacked links */
-    }
-
-
-
-    .welcome-logo .signup-logo {
-        width: 70%; /* Scale images for smaller screens */
-        max-width: 200px;
-        margin-top: 20%;
-        margin-left: -100%;
-    }
-
-    #welcome{
-        margin-left: -10%;
-    }
-
-    .sign_up_container .welcome-logo{
-        width: 100%;
-        max-width: 300px;
-        margin-right: 150%;
-
-    }
-
-    .sign_up_container{
-        position: relative;
-        width: 150vh;
-        height: 100vh;
-        max-width: 610px;
-        align-items: center;
-    }
-
-    .login-container {
-        margin-top: 0%;
-        margin-right: 20%;
-        
-        
-    }
-
-    .login-container form{
-        padding: 20px;
-        align-items: center;
-        gap: 1px;
-        border-radius: 1rem;
-    }
-
-    
 }
     
-
-
-/* For tablets and larger screens (768px and above) */
-@media (min-width: 1024px) {
-    section {
-        padding: 3rem 0rem;
-    }
-
-    .navbar {
-        max-width: 1200px;
-        margin: auto;
-    }
-}
 
 /* For smaller screens (phones, below 768px) */
 @media (max-width: 767px) {
@@ -1708,158 +1580,9 @@ h4 {
         position: fixed;
         top: 0;
         right: 0;
-        z-index: 15;
-        background-color: #333;
-        transition: all 0.3s ease;
-        transition: box-shadow 0.3s ease;
-    }
 
-
-    .menu-toggle:checked + .hamburger + .menu {
-        display: flex; /* Show menu when checked */
-        box-shadow: 5 8px 12px rgba(0, 0, 0, 0.2); /* Shadow properties */
     }
-
-    .menu-toggle:checked + .hamburger .bar:nth-child(1) {
-        transform: rotate(45deg);
-        position: relative;
-        top: 9px; /* Adjust to align with the middle */
-    }
-    
-    .menu-toggle:checked + .hamburger .bar:nth-child(2) {
-        opacity: 0; /* Hide the middle bar */
-    }
-    
-    .menu-toggle:checked + .hamburger .bar:nth-child(3) {
-        transform: rotate(-45deg);
-        position: relative;
-        top: -9px; /* Adjust to align with the middle */
-    }
-    
-    /* Home section text for mobile */
-    #home {
-        height: 150vh; /* Full viewport height for a banner effect */
-        width: auto;
-        mix-blend-mode: multiply;
-        flex-direction: column;
-        column-gap: 0;
-    }
-
-    #home .content {
-        width: 100%;
-        font-size: 0.8rem; /* Smaller font size */
-        order: 2;
-        margin-top: -10rem;
-    }
-
-       
-    #logo-home img {
-        width: 100%; /* Make the logo responsive */
-        top: 10%;
-        left: 10%;
-        max-width: 400px;
-        margin-bottom: auto;
-        height: auto; /* Maintain aspect ratio */
-        margin-right: 50px; /* Add some spacing to the right of the logo */
-        z-index: 90;
-        order: 1;
-    }
-    /* Adjust form for small screens */
-    form {
-        width: 90%;
-    }
-    
-    .show-more {
-        top: 37%;
-        left: 20px;
-    }
-
-    .show-more a {
-        font-size: 20px ;
-        top: 37%;
-        left: 20px;
-    }
-
-
-  /* Log in and sign up */
- 
-    /* LOGINS AND SIGNUPS */
-
-
-    
-    .welcome-logo .signup-logo {
-        width: 80%; /* Scale images for smaller screens */
-        max-width: 200px;
-        margin-top: 20%;
-        margin-left: -10%;
-    }
-
-    .sign_up_container .welcome-logo{
-        width: 100%;
-        max-width: 300px;
-        margin-top: 20%;
-        margin-left: -50%;
-    }
-
-    .sign_up_container{
-        position: relative;
-        width: 150vh;
-        height: 100vh;
-        max-width: 900px;
-        align-items: center;
-    }
-
-    .login-container {
-        margin-top: 0%;
-        margin-right: 20%;
-        
-        
-    }
-
-    .login-container form{
-        padding: 20px;
-        align-items: center;
-        gap: 1px;
-        border-radius: 1rem;
-    }
-
-    .input-group .name .pass{
-        padding-top: 10px;
-        width: 200px;
-    }
-
-    .input-group input{
-        padding: 20px;
-        
-    }
-
-    .login-box {
-        position: relative;
-        padding: 5px;
-        width: 50vh;
-    }
-
-    .make_account_container .signup-container {
-        background-size: cover;
-        width: 90%; /* Reduce container width */
-        padding: 15px; /* Adjust padding */
-    }
-
-    .input-group input, .email, .password, .USERNAME {
-        width: 90%; /* Inputs span most of the screen */
-        max-width: 400px;
-    }
-
-    .login-button, .signup-button {
-        width: 100%; /* Buttons use full width */
-        max-width: 150px;
-    }
- 
-
-   
-
 }
-
 @media (max-width: 768px) {
     .overlay-text {
         font-size: 1rem; /* Smaller font size for tablets */
@@ -1870,7 +1593,16 @@ h4 {
         font-size: .7rem; /* Smaller font size for tablets */
         top: 75%; /* Adjust position for smaller screens */
     }
+    
+    .seemore{
+        font-size: 1.2rem; /* Smaller font size for tablets */
+        top: 75%; /* Adjust position for smaller screens */
+    }
 
+    .skewered_foods {
+        font-size: 2rem; /* Smaller font size for tablets */
+        top: 90%; /* Adjust position for smaller screens */
+    }
 
 }
 
@@ -1885,27 +1617,7 @@ h4 {
         top: 70%; /* Adjust position for smaller screens */
     }
 
-}
 
-
-@media (max-width: 768px) {
-    
-
-    .seemore{
-        font-size: 1.2rem; /* Smaller font size for tablets */
-        top: 75%; /* Adjust position for smaller screens */
-    }
-
-    .skewered_foods {
-        font-size: 2rem; /* Smaller font size for tablets */
-        top: 90%; /* Adjust position for smaller screens */
-    }
-
-
-
-}
-
-@media (max-width: 480px) {
     .seemore {
         font-size: 1.2rem; /* Even smaller font size for mobile */
         top: 70%; /* Further adjust position */
@@ -1915,4 +1627,24 @@ h4 {
         font-size: 1.5rem; /* Even smaller font size for mobile */
         top: 90%; /* Further adjust position */
     }
+}
+
+    
+@media (max-width: 320px) {
+    .seemore {
+        font-size: 1.2rem; /* Even smaller font size for mobile */
+        top: 70%; /* Further adjust position */
+    }
+
+    .skewered_foods {
+        font-size: 1.5rem; /* Even smaller font size for mobile */
+        top: 90%; /* Further adjust position */
+    }
+
+    
+    .text1, .text2, .text3, .text4{
+        font-size: 1rem; /* Smaller font size for tablets */
+        top: 70%; /* Adjust position for smaller screens */
+    }
+
 }
