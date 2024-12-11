@@ -1,0 +1,532 @@
+
+
+#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url("/images/Background Home.jpg") no-repeat center center/cover;
+    color: #fff;
+    min-height: 100vh; /* Fit the viewport height */
+    height: 120%;
+    padding: 0px 0px;
+  }
+
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.Home-section {
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    padding: 1rem 1rem;
+}
+
+.Home-section h1{
+    font-size: 3rem;
+    padding-bottom: 5%;
+    
+}
+
+.Home-section img{
+    width: 100%;
+    width: 1000px;
+    max-width: 400px;
+    min-width: 250px;
+}
+
+.Home-section .content{
+    margin: 15%;
+    display: block;
+}
+
+.Home-section h1{
+  font-size: 2.5rem;
+}
+
+.Home-section .content a{
+    display: inline-block; /* Ensure it's a block-level element */
+    padding: 0.8rem 1rem;
+    background-color: #d4d700;
+    color: #0c0c0c;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none; /* Ensure it's styled as a link */
+    position: relative; /* Allow positioning */
+    z-index: 3; /* Ensure it is above the overlay */
+    margin-top: 2rem; /* Add some space above the button */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+#home_button:hover {
+    background-color: #c6c300;
+    transform: scale(1.01); /* Slightly scale up on hover */
+    z-index: 4; /* Ensure it remains on top when hovered */
+}
+
+.Home-section .Home-2 {
+    padding: 0px 0px 0px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.menu-categories {
+    position: relative;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    column-gap: 8rem;
+    margin-top: -15%;
+    margin-bottom: -10%;
+    z-index: 20;
+    bottom: 10%;
+    left: 50%;;
+    gap:9rem;
+    
+}
+
+
+.menu-categories a {
+    font-size: 1.2rem;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.7);
+    z-index: 80;
+}
+
+.menu li {
+    padding: 0px 10;
+}
+
+
+
+
+.menu-categories a:hover {
+    text-decoration: underline;
+}
+
+.Home-section a{
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    color: #ffffff;
+    text-align: center;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+}
+
+.Home-section a:hover{
+    transform: translateY(-50%) scale(1.1);
+    text-decoration: navy;
+}
+
+.about-section {
+  padding: 20px;
+  height: 120vh;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(#46291b 2.91%, #663D27 16.95%, #7c4e35 82.93%)
+}
+
+.about-section h1{
+  margin-top: 9%;
+}
+
+
+.custom-shape-divider-top {
+  fill: #46291b;
+  -webkit-transform: scaleY(-1); transform: scaley(-1);
+}
+
+
+.about-container {
+  z-index: 20;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px; /* Space between the two containers */
+}
+
+.about-container img{
+  height: 10px;
+  width: 500px;
+}
+
+
+.custom-shape-divider-top {
+  position: absolute;
+  bottom: -1%; /* Adjust to align with the bottom of the previous section */
+  left: 0;
+  height: 20%;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 2;
+}
+
+#container_1 {
+  flex: 1;
+  z-index: 20;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+#container_2 {
+  flex: 1;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container_2 img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+#container_1 a{
+  font-size: 2rem;
+  text-decoration: none;
+  background-color: #ffee05;
+  color: black;
+  padding: 15px 30px;
+  border-radius: 5rem;
+  
+  box-shadow: 1px 1px 5px rgb(0, 0, 0);
+}
+
+#container_1 a:hover{
+  background-color: #c6c300;
+  color: wheat;
+  transform: scale(1.01);
+  z-index: 4; 
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+
+
+/* Products */
+#products {
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#eff192 12.91%, #d4d700 26.95%, #c7b517 42.93%);
+    height: 100vh;
+    padding: 20px;
+  }
+  #products h2 {
+    font-size: 6rem; /* Default font size */
+    text-align: center;
+    color: #146d5b;
+    text-shadow: 2px 2px #ffffff;
+    }
+
+
+    
+  .custom-shape-divider-top-products {
+    fill: #eff192;
+    -webkit-transform: scale(-1, -1); /* Flip both axes */
+    transform: scale(-1, -1);
+  }
+
+
+  .custom-shape-divider-top-products {
+    position: absolute;
+    bottom: -121%; /* Adjust to align with the bottom of the previous section */
+    left: 0;
+    height: 80%;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 2;
+  }
+  
+  .products-slider {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    padding: 10px 10px;
+  }
+  
+  .slider-wrapper {
+    overflow: hidden; /* Ensures only one products is visible */
+    width: 80%;
+    height: 110%;
+  }
+  
+  
+  .products-samples {
+    display: flex;
+    width: 600px; /* Constrain the width to one products */
+    height: 500px; /* Match products height */
+    position: relative;
+    transition: transform 0.5s ease; /* Smooth transition */
+    gap: 40%;
+    padding: 11px ;
+    left: 20%;
+  }
+  
+  .produkto_obj {
+    flex: 0 0 100%; /* Each products takes up 100% of the container */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    text-align: center;
+    width: 100%; /* Matches container width */
+    height: 100%; /* Matches container height */
+    padding: 40px;
+    border-radius: px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .produkto_obj img {
+    margin-right: 10%;
+    width: 300px;
+    height: auto;
+    margin-bottom: 5px;
+  }
+ 
+  .produkto_obj img[alt="meals"]{
+    width: 200px;
+    height: 200px;
+  }
+  
+  .produkto_obj p {
+    font-size: 1.2em;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .produkto_obj a {
+    margin-bottom: 10%;
+    text-decoration: none;
+    color: #feffff;
+    font-weight: bold;
+    margin-top: auto;
+    background-color: #00796b;
+    border-radius: .5rem;
+    padding: 15px 40px;
+    font-size: 35px;
+  }
+  
+  .produkto_obj a:hover{
+    transform: scale(1.15);
+    background-color: #099282;
+    color: #c4e6e2;
+  }
+  
+  /* Scroll buttons */
+  .products-scroll-btn {
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 120px;
+    height: 100px;
+    font-size: 1.2em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 2; /* Ensure buttons are above productss */
+  }
+  
+  .products-scroll-btn.left-btn {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .products-scroll-btn.right-btn {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .products-scroll-btn:hover {
+    background-color: #81dacb;
+    transform: scale(1.1);
+  }
+
+  
+#contact{
+    background: linear-gradient(  #202046, 2.91%, #202046 80.95%, rgb(212, 220, 220) 90.93%);
+    position: relative;
+    height: 100vh;
+    align-items: center;
+    text-align: center;
+    padding: 10px 10px;
+  }
+  
+  #contact .text {
+    margin: 0 auto;
+    padding: 10px;
+    color: rgb(252, 255, 236);
+    font-size: 1.5rem;
+    margin-bottom: 5%;
+    max-width: 90%; /* Prevents overflow */
+  }
+  
+  #contact a{
+    font-size: 25px;
+    text-decoration: none;
+    color: #00bcd4;
+  }
+  
+  #contact .button{
+    color: white;
+    background: #00bcd4;
+    padding: 10px 10px;
+  }
+  
+  #contact h2{
+    margin-top: 10%;
+    color: white;
+    font-size: 60px;
+  }
+
+ 
+  .motto{
+    background: linear-gradient(  #16534B, 2.91%, #16534B 26.95%, #202046 42.93%);
+    position: relative;
+    height: 70vh;
+    align-items: center;
+    text-align: center;
+  }
+
+
+  .motto h2{
+    margin-top: 10%;
+    color: rgb(255, 255, 255);
+    font-size: 60px;
+  }
+
+  
+    
+  .motto-divider {
+    fill: #16534B;
+    -webkit-transform: scale(-1, -1); /* Flip both axes */
+    transform: scale(-1, -1);
+  }
+
+
+  .motto-divider {
+    position: absolute;
+    bottom: 100%; /* Adjust to align with the bottom of the previous section */
+    left: 0;
+    height: 29.5%;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 2;
+  }
+  
+@media (max-width:1171px) {
+  
+  .Home-section h1{
+    font-size: 2rem;
+  }
+
+  .Home-section img{
+    width: 80%;
+  }
+
+  .Home-section .content a{
+    font-size: 7;
+  }
+
+}
+
+
+
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+  #products h2 {
+      font-size: 4rem; /* Smaller font size on smaller screens */
+  }
+
+  .custom-shape-divider-top-products {
+      height: 15%; /* Adjust the height of the SVG on smaller screens */
+  }
+
+  .Home-section h1{
+    font-size: 2rem;
+  }
+
+  .Home-section img{
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 768px) {
+  #products h2 {
+      font-size: 3rem; /* Even smaller font size on mobile devices */
+  }
+
+  .custom-shape-divider-top-products {
+      height: 12%; /* Further reduce height on mobile */
+  }
+
+  .Home-section{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Home-section .content{
+    order: 2;
+  }
+
+  .Home-section .logo-home{
+    order: 1;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  #products h2 {
+      font-size: 2rem; /* Very small font size on very small screens */
+  }
+
+  .custom-shape-divider-top-products {
+      height: 10%; /* Very small divider on small screens */
+  }
+}
+
+
