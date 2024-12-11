@@ -1294,15 +1294,148 @@ h4 {
     }
 }
 @media (max-width: 768px) {
-    .overlay-text {
-        font-size: 1rem; /* Smaller font size for tablets */
-        top: 75%; /* Adjust position for smaller screens */
+    .navbar {
+        align-items: center;
+        margin: auto;
+        padding: .5rem .5rem;
     }
 
-    .text1, .text2, .text3, .text4{
-        font-size: .7rem; /* Smaller font size for tablets */
-        top: 75%; /* Adjust position for smaller screens */
+    .navbar .Signup-bt  {
+        order: 1;
+        align-self: left;
+        margin-left: 1%;
     }
+    
+    .navbar .logo {
+        display: none;
+    }
+
+
+    
+    .menu-categories {
+        top: 185%;
+        bottom: 10%;
+    }
+
+    .design-image {
+        top: 10%; /* Adjust vertical position */
+        max-width: 10000%;
+        height: 30%; /* Reduce the width for smaller screens */
+    }
+
+    
+    .hamburger {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 24px;
+        height: 24px;
+      
+        position: relative;
+        z-index: 25; /* Ensure it appears above the menu */
+        order: 2;
+    }
+    
+    .hamburger .bar {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: rgb(255, 255, 255);
+        transition: all 0.3s ease; /* Smooth animation */
+    }
+
+    .navbar {
+        flex-direction: row;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center; /* Centers items vertically within the navbar */
+        justify-content: space-between;
+        padding: 1px 10px;
+        list-style-type: none;
+        margin: auto;
+    }
+
+    /* Hide the menu by default */
+    .menu { 
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 15;
+        background-color: #333;
+        transition: all 0.3s ease;
+        transition: box-shadow 0.3s ease;
+    }
+
+
+    .menu-toggle:checked + .hamburger + .menu {
+        display: flex; /* Show menu when checked */
+        box-shadow: 5 8px 12px rgba(0, 0, 0, 0.2); /* Shadow properties */
+    }
+
+    .menu-toggle:checked + .hamburger .bar:nth-child(1) {
+        transform: rotate(45deg);
+        position: relative;
+        top: 9px; /* Adjust to align with the middle */
+    }
+    
+    .menu-toggle:checked + .hamburger .bar:nth-child(2) {
+        opacity: 0; /* Hide the middle bar */
+    }
+    
+    .menu-toggle:checked + .hamburger .bar:nth-child(3) {
+        transform: rotate(-45deg);
+        position: relative;
+        top: -9px; /* Adjust to align with the middle */
+    }
+    
+    /* Home section text for mobile */
+    #home {
+        height: 150vh; /* Full viewport height for a banner effect */
+        width: auto;
+        flex-direction: column;
+        column-gap: 0;
+    }
+
+    #home .content {
+        width: 100%;
+        font-size: 0.8rem; /* Smaller font size */
+    }
+
+       
+    #logo-home img {
+        width: 100%; /* Make the logo responsive */
+        top: 10%;
+        left: 10%;
+        max-width: 400px;
+        margin-bottom: auto;
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 50px; /* Add some spacing to the right of the logo */
+        z-index: 90;
+    }
+    /* Adjust form for small screens */
+    form {
+        width: 90%;
+    }
+    
+    .show-more {
+        top: 37%;
+        left: 20px;
+    }
+
+    .show-more a {
+        font-size: 20px ;
+        top: 37%;
+        left: 20px;
+    }
+
+
     
     .seemore{
         font-size: 1.2rem; /* Smaller font size for tablets */
@@ -1314,8 +1447,15 @@ h4 {
         top: 90%; /* Adjust position for smaller screens */
     }
 
-}
+    .text1, .text2, .text3, .text4{
+        font-size: .7rem; /* Smaller font size for tablets */
+        top: 75%; /* Adjust position for smaller screens */
+    }
 
+
+
+
+}
 @media (max-width: 480px) {
     .overlay-text {
         font-size: 1.2rem; /* Even smaller font size for mobile */
