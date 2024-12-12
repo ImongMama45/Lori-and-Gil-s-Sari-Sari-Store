@@ -1,0 +1,581 @@
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+ /* PARA SAME MARGINS AND PADDINGS FOR ALL */
+
+body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+ /* LOGO */
+
+.navbar .logo img {
+    width: 100%; 
+    height: 20%; 
+    max-width: 100px;
+    max-height: 100px;
+}
+.navbar li.logo{
+    height: 20%;
+    width: 10%;
+}
+
+
+
+/* _____   _____         _____      _____          _____
+  |     \ |     |       /     \     \    \        /    /
+  |      \|     |      /       \     \    \      /    /
+  |             |     /    A    \     \    \    /    /
+  |             |    /     _     \     \    \  /    /
+  |    |\       |   /     / \     \     \    \/    /
+  |    | \      |  /     /   \     \     \        /
+  |____|  \_____| /_____/     \_____\     \______/
+*/
+
+
+
+/* Navigation bar */
+header {
+    background-color: #333;
+}
+
+/* Navigation bar styling */
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    padding: 1px 10px;
+    list-style-type: none;
+}
+
+/* Navigation Links */
+.navbar ul {
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* nav bar links */
+.navbar li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: .5rem 1rem;
+    font-weight: bold;
+    line-height: 1.5; 
+    transition: color 0.3s ease;
+    border-radius: .5px;
+}
+
+/* Active link styling WHEN BUTTON CLICKED AND CURRENT */
+.navbar li a.active {
+    color: #000000;
+    background-color: #d4d700;
+    border-radius: 5px;
+}
+
+/* Hover effect */
+.navbar li a:hover {
+    color: #ffee6a;
+}
+
+/* Sign-up button styling  KULAAAAAAAAYYYY*/
+.navbar li a.signup-btn {
+    color: #0c0c0c;
+    background-color: #d4d700;
+    padding: 0.5rem 1rem;
+    border-radius: 2px;
+
+}
+
+.navbar li a.signup-btn {
+    padding-left: 10px;
+}
+
+.signup-btn {
+    z-index: 10; 
+    position: relative;
+    margin-left: auto;
+}
+
+
+/* 
+  __  __  ______  __    __  __    __
+ |  \/  ||  ____||  \  |  ||  |  |  |
+ | \  / || |____ |   \ |  ||  |  |  |
+ | |\/| ||  ____|| |\ \|  ||  |  |  |
+ | |  | || |____ | | \    ||  |__|  |
+ |_|  |_||______||_|  \___||________|
+
+*/
+
+.menu {
+    display: flex;
+    padding-left: 30px;
+}
+
+.menu li a { 
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff ;
+    text-align: center;
+    transition: 0.15s ease-in-out;
+}
+
+/* Hide the checkbox itself */
+.menu-toggle {
+    display: none;
+}
+
+/* Hamburger icon styling */
+.hamburger {
+    display: none;
+    position: relative;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    z-index: 25; 
+    
+}
+
+
+
+
+/* ANDITO YUNG FOR PAGES KARAMIHAN DITO AY MGA 
+            IEEDIT NINYO FOR PAGES
+MAY NAKALAGAY NAMAN NA "#" PER PAGES KAYA YAN YUN
+LAGAY NALANG KAYO SA NG NAKA "#" IF WANT NYO MAG DESIGN 
+        SA PAGE NA ASSIGN SAINYO TENCHU
+ */
+
+/* 
+  _____   _____   ____    _____    _____
+ |  __ \ |  __ \ |  __ \  |  __ \  |  __ \
+ | |__) || |__) || |__) | | |__) | | |__) |
+ |  ___/ |  _  / |  ___/  |  _  /  |  _  / 
+ | |     | | \ \ | |      | | \ \  | | \ \
+ |_|     |_|  \_\|_|      |_|  \_\ |_|  \_\
+*/
+
+section {
+    padding: 2rem;
+    text-align: center;
+}
+
+
+/* HOME / INDEX  */
+
+#home {
+    background: url('img/About.png') no-repeat center center/cover;
+    color: #fff; 
+    padding: 3rem 1rem;
+    text-align: center;
+    position: relative; 
+}
+
+/* Optional: Add an overlay for better contrast */
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+#home h1, #home p {
+    position: relative;
+    z-index: 5; 
+}
+
+
+/* PRODUCTS  */
+
+#products, #testimonials, #contact {
+    background-color: #f3f3f3;
+    margin: 1rem 0;
+}
+
+
+/* CONTACT US */
+
+/* Form styling */
+form {
+    max-width: 400px;
+    margin: auto;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+    border-radius: 8px;
+}
+
+form label {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+form input[type="text"],
+form input[type="email"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 0.5rem 1rem;
+    background-color: #d4d700;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #000;
+    color: #d4d700;
+}
+
+
+/* SCREEN SIZES LANG ITO MGA PAR */
+
+
+@media (max-width: 610px) {
+    /* Show the hamburger icon */
+    .hamburger {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 24px;
+        height: 24px;
+      
+        position: relative;
+        z-index: 25; 
+        order: 2;
+    }
+    
+    .hamburger .bar {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: rgb(255, 255, 255);
+        transition: all 0.3s ease; 
+    }
+
+    .navbar {
+        flex-direction: row;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center; 
+        justify-content: space-between;
+        padding: 1px 10px;
+        list-style-type: none;
+        margin: auto;
+    }
+
+    .signup-btn {
+        order: 1;
+    }
+    
+    /* Hide the menu by default */
+    .menu { 
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 50%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 15;
+        background-color: #333;
+        transition: all 0.3s ease;
+        transition: box-shadow 0.3s ease;
+    }
+
+    .menu li {
+        padding: 0px 10;
+    }
+
+    /* When the checkbox is checked, show the menu and overlay */
+    .menu-toggle:checked + .hamburger + .menu {
+        display: flex; 
+        box-shadow: 5 8px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu-toggle:checked + .hamburger .bar:nth-child(1) {
+        transform: rotate(45deg);
+        position: relative;
+        top: 9px;
+    }
+    
+    .menu-toggle:checked + .hamburger .bar:nth-child(2) {
+        opacity: 0; 
+    }
+    
+    .menu-toggle:checked + .hamburger .bar:nth-child(3) {
+        transform: rotate(-45deg);
+        position: relative;
+        top: -9px; 
+    }  
+}
+
+/* For tablets and larger screens (768px and above) */
+@media (min-width: 1024px) {
+    section {
+        padding: 3rem 1rem;
+    }
+
+    .navbar {
+        max-width: 1200px;
+        margin: auto;
+    }
+}
+
+/* For smaller screens (phones, below 768px) */
+@media (max-width: 767px) {
+    .navbar {
+        align-items: center;
+        margin: auto;
+        padding: .5rem .5rem;
+    }
+    
+    .navbar .logo {
+        display: none;
+    }
+    
+    /* Home section text for mobile */
+    #home {
+        font-size: 1.1rem;
+        padding: 3rem 1rem;
+    }
+
+    /* Adjust form for small screens */
+    form {
+        width: 90%;
+    }
+}
+
+.container1{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('img/About(1).png') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8)70%, rgba(248, 199, 52, 0.5)90%);
+    padding: 50px;
+    display: inline;
+    opacity: 1;
+    z-index: 2;
+    overflow-y: auto;
+}
+
+.left-images, .right-images {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 3;
+}
+
+.left-images {
+    left: 5%;
+}
+
+.right-images {
+    right: 5%;
+}
+
+/* Individual side images styling */
+.left-images div, .right-images div {
+    width: 150px; /* Adjust size as needed */
+    height: 150px; /* Adjust size as needed */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.left-images div.bbq-image {
+    position: absolute;
+    width: 200px; /* Custom size for BBQ image */
+    height: 200px;
+    right: -120px;
+    border-radius: 60px;
+    top: -280px;
+    z-index: 2;
+}
+
+.left-images div.pep-image {
+    position: absolute;
+    width: 300px; /* Custom size for Pep image */
+    height: 500px;
+    top: -200px;
+    right: -225px;
+    z-index: 1;
+}
+
+.left-images div.banana_q-image {
+    position: absolute;
+    width: 300px; /* Custom size for Banana-Q image */
+    height: 300px;
+    left: 20px;
+    top: 50px;
+    z-index: 2;
+    transform: rotate(30deg);
+}
+
+.right-images div.bred-image {
+    position: absolute;
+    width: 200px; /* Custom size for Bread image */
+    height: 200px;
+    top: 60px;
+    left: 180px;
+    z-index: 2;
+}
+
+.right-images div.peps-image {
+    width: 300px; /* Custom size for Peps image */
+    height: 500px;
+    top: 120px;
+    left: 80px;
+    z-index: 1;
+}
+
+.right-images div.pancet-image {
+    width: 250px; /* Custom size for Pancit image */
+    height: 170px;
+    top: -10px;
+    z-index: 2;
+    left: 160px;
+    transform: rotate(-30deg);
+}
+
+.left-images img, .right-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: none;
+    border: none;
+    background: none;
+}
+
+.abt {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    max-width: 900px;
+    margin: 40px auto 0;
+}
+
+.curved-svg {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: -20px;
+}
+
+.curved-text {
+    font-size: 67px;
+    letter-spacing: 0;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    text-anchor: middle;
+}
+
+.store-img {
+    width: 500px;
+    height: 250px;
+    margin-top: -20px;
+    border-radius: 250px 250px 0 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.store-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+}
+
+.lines {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px; /* Space between the lines */
+}
+
+.line {
+    background-color: black; /* Set the color of the lines */
+}
+
+.line1 {
+    width: 500px;
+    height: 5px;
+    background-color: white;
+    margin: 10px auto;
+}
+.line2 {
+    width: 500px;
+    height: 3px;
+    background-color: white;
+    margin: 10px auto;
+}
+.line3 {
+    width: 500px;
+    height: 1px;
+    background-color: white;
+    margin: 10px auto;
+}
+
+.text-content {
+    color: white;
+    max-width: 600px;
+    margin: 0 20px;
+}
+
+.text-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
