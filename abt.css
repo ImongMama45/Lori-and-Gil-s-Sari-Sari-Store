@@ -1,27 +1,33 @@
-/* Global reset */
-* {
+ 
+ 
+ 
+ /* NANDITO YUNG GENERAL CODE DESIGN NA 
+ APPLICABLE SA LAHAT NG PAGES NASA
+ BABA YUNG MGA PAGE SPECIFIC DESIGNS
+  PARA SAME MARGINS AND PADDINGS FOR ALL */
+
+
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: none;
-    outline: none;
-    scroll-behavior: smooth;
 }
 
  /* PARA SAME MARGINS AND PADDINGS FOR ALL */
 
-body, html {
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    position: relative;
+    background: linear-gradient(to bottom, #b8bf2c 10%, #1d1d1d 95%);
+    color: #333;
 }
 
  /* LOGO */
 
 .navbar .logo img {
-    width: 100%; 
-    height: 20%; 
+    width: 100%; /* Reduce the width to 50% of its original size */
+    height: 20%; /* Keep the height proportional */
     max-width: 100px;
     max-height: 100px;
 }
@@ -43,15 +49,10 @@ body, html {
 */
 
 
-       
 
 /* Navigation bar */
 header {
     background-color: #333;
-    position: fixed;
-    z-index: 100;
-    width: 100%;
-    height: auto;
 }
 
 /* Navigation bar styling */
@@ -60,9 +61,9 @@ header {
     display: flex;
     align-items: center; /* Centers items vertically within the navbar */
     justify-content: space-between;
-    padding: 5px 10px;
+    padding: 1px 10px;
     list-style-type: none;
-    z-index: 50;
+
 }
 
 /* Navigation Links */
@@ -75,10 +76,6 @@ header {
 }
 
 /* nav bar links */
-.navbar li {
-    position: relative; /* Ensure dropdown is positioned relative to this */
-}
-
 .navbar li a {
     color: #ffffff;
     text-decoration: none;
@@ -101,530 +98,78 @@ header {
     color: #ffee6a;
 }
 
-/* Sign-up button styling */
-.navbar .Signup-bt {
+/* Sign-up button styling  KULAAAAAAAAYYYY*/
+.navbar li a.signup-btn {
     color: #0c0c0c;
     background-color: #d4d700;
     padding: 0.5rem 1rem;
     border-radius: 2px;
-    font-size: large;
-    font-weight: bold;
+
 }
 
-.Signup-bt {
+.navbar li a.signup-btn {
+    padding-left: 10px;
+}
+
+.signup-btn {
     z-index: 10; /* Lower z-index compared to .hamburger */
     position: relative;
-  
-}
-
-/* Dropdown menu styling */
-.dropdown {
-    display: none; /* Hide dropdown by default */
-    position: absolute; /* Change to absolute */
-    flex-direction: column;
-    background-color: #333; /* Background color for dropdown */
-    padding: 0; /* Remove padding */
-    z-index: 100; /* Ensure it appears above other content */
-    opacity: 0;
-    padding: auto;
-}
-
-/* Show dropdown when hovering over the Products link */
-.navbar li:hover .dropdown {
-    display: block; /* Show dropdown on hover */
-    flex-direction: column; /* Stack dropdown items vertically */
-    opacity: 100;
-    
-}
-
-/* Dropdown items */
-.dropdown li {
-    list-style-type: none; /* Remove bullet points */
-    font-weight: bold;
-    line-height: 1.5; /* Centers text vertically */
-    transition: color 0.3s ease;
-    border-radius: 2px;
-    font-size: small;
-}
-
-.dropdown li a {
-    padding: 0.5rem 1rem; /* Padding for dropdown links */
-    color: #ffffff; /* Text color */
-    text-decoration: none; /* No underline */
-    display: block; /* Make links block-level */
-    
-}
-
-/* Dropdown link hover effect */
-.dropdown li a:hover {
-    background-color: #d4d700; /* Change background on hover */
-}
-
-/* Positioning for the dropdown */
-.navbar li {
-    position: relative; /* Position relative to show dropdown */
+    margin-left: auto;
 }
 
 
-
-
-
-.Popup-Signup {
-    position: fixed; 
-    display: flex;
-    visibility: hidden;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1.25);
-    width: 400px;
-    height: 500px;
-    padding: 20px 30px;
-    background: url("./images/image1.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    border-radius: 1rem;
-    z-index: 120; 
-    transition: top 0ms ease-in-out 200ms,
-                opacity 200ms ease-in-out 0ms,
-                transform 20ms ease-in-out 0ms;
-}
-
-.Popup-Signup {
-    align-self: center;
-    opacity:0;
-}
-
-
-.Popup-Signup.active{
-    display: flex; /* Ensures it shows flexibly */
-    top: 50%;
-    opacity: 1;  
-    visibility: visible; 
-    transform: translate(-50%, -50%) scale(1);
-    transition: top 0ms ease-in-out 0ms,
-                opacity 200ms ease-in-out 0ms,
-                transform 200ms ease-in-out 0ms;
-}
-.Popup-Signup .close-button{
-    position: absolute;
-    top:10px;
-    right: 10px;
-    width: 15px;
-    height: 15px;
-    background: rgb(234, 222, 222);
-    color: rgb(0, 0, 0);
-    text-align: center;
-    z-index: 5;
-    line-height: 15px;
-    border-radius: 100%;
-    cursor: pointer;
-}
-
-
-.Popup-Signup::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; 
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 1rem;
-    z-index: 1;
-}
-
-
-
-.Popup-Signup .Signup-items {
-    color: white;
-    position: relative; 
-    z-index: 3; 
-    margin: 1px 1px;
-
-}
-
-
-.Popup-Signup .Signup-items label {
-    color: white;
-    box-shadow: white;
-    font-size: 20px;
-
-}
-
-.Popup-Signup .Signup-items input{
-    width: 320px;
-    height: 30px;
-    margin: 10px;
-}
-
-.Popup-Signup .Signup-form .Signup-items a{
-    align-items: center;
-    text-align: center;
-    margin-left: 1%;
-    padding-bottom: 5%;
-    padding-top: 5%;
-    font-weight: 100;
-    color: #51a3fa;;
-    font-weight: 10;
-    margin-left: 1%;
-}
-
-
-.Popup-Signup .Signup-form .Signup-items p{
-    align-items: center;
-    margin-left: 15%;
-    padding-bottom: 5%;
-    padding-top: 2%;
-    font-weight: 100;
-
-}
-
-
-
-.Popup-Signup .Signup-form h1{
-    position: relative;
-    z-index: 5;
-    font-size: 25px;
-    text-align: center;
-    padding: 1%;
-    margin-top: 2%;
-}
-
-.Popup-Signup .Signup-form .Signup-items input[type="checkbox"]{
-    position: relative;
-    width: 10px;
-    height: auto;
-    text-indent: 10%;
-    margin-left: 50%;
-    margin-right: 0px;
-}
-
-
-
-.Popup-Signup .Signup-form .Signup-items button{
-    position: relative;
-    margin-top: 10px;
-    width: 100%;
-    height: 30px;
-    align-items: center;
-    text-align: center;
-    box-shadow: black;
-    background: #fbff25;
-    border: none;
-    color: rgb(0, 0, 0);
-    font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all;
-    transition: transform 0.2s;
-    margin-bottom: 10px;
-}
-
-.Popup-Signup .Signup-form .Signup-items button:hover{
-    background-color: #9b7d07d7;
-    transform: translateY(2px);
-}
-
-    /* SIGN UP AND LOGINS */
-
-
-
-.Signup-bt:checked + .Popup{
-    display: block;
-}
-
-.Popup {
-    position: fixed; 
-    display: none;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1.25);
-    width: 360px;
-    padding: 20px 30px;
-    background: url("./images/image1.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    border-radius: 1rem;
-    z-index: 1; 
-    transition: top 0ms ease-in-out 200ms,
-                opacity 200ms ease-in-out 0ms,
-                transform 20ms ease-in-out 0ms;
-}
-
-.Popup {
-    align-self: center;
-    opacity:0;
-}
-
-
-.Popup.active{
-    display: flex; /* Ensures it shows flexibly */
-    top: 50%;
-    opacity: 1; 
-    z-index: 120;  
-    transform: translate(-50%, -50%) scale(1);
-    transition: top 0ms ease-in-out 0ms,
-                opacity 200ms ease-in-out 0ms,
-                transform 200ms ease-in-out 0ms;
-}
-.Popup .close-button{
-    position: absolute;
-    top:10px;
-    right: 10px;
-    width: 15px;
-    height: 15px;
-    background: rgb(234, 222, 222);
-    color: rgb(0, 0, 0);
-    text-align: center;
-    z-index: 5;
-    line-height: 15px;
-    border-radius: 100%;
-    cursor: pointer;
-}
-
-
-.Popup::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; 
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 1rem;
-    z-index: 1;
-}
-
-
-.Popup .Login-form h1{
-    z-index: 20;
-    font-size: 50px;
-    text-align: center;
-    padding: 10%;
-    position: relative;
-}
-
-.Popup .Login-form .Login-items input[type="checkbox"]{
-    text-indent: 10%;
-    margin-left: -15%;
-    margin-right: -120px;
-}
-
-
-
-.Popup .Login-form .Login-items button{
-    margin-top: 10px;
-    width: 100%;
-    height: 30px;
-    align-items: center;
-    text-align: center;
-    box-shadow: black;
-    background: #fbff25;
-    border: none;
-    color: rgb(0, 0, 0);
-    font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all;
-    transition: transform 0.2s;
-    margin-bottom: 10px;
-}
-
-.Popup .Login-form .Login-items button:hover{
-    background-color: #9b7d07d7;
-    transform: translateY(2px);
-}
-
-
-.Popup .Login-items {
-    color: white;
-    position: relative; 
-    z-index: 3; 
-    margin: 10px 10px;
-
-}
-
-.Popup .Login-items label {
-    color: white;
-    box-shadow: white;
-    
-}
-
-.Popup .Login-form .Login-items a, p{
-    align-items: center;
-    margin-left: 1%;
-    padding-bottom: 5%;
-    padding-top: 5%;
-    font-weight: 100;
-
-}
-
-.Popup .Login-form .Login-items a{
-    color: #51a3fa;
-}
-
-
-/* Popup Overlay */
-.overlay {
-    position: fixed;
-    display: none;
-    margin: 0px 0px;
-    background: rgba(0, 0, 0, 0.5);
-    visibility: hidden;
-    opacity: 0;
-    z-index: -1;
-    padding: 60px 20px; /* Add padding to create space from top */
-    width: 100%;
-
-    transition: top 0ms ease-in-out 200ms,
-                opacity 200ms ease-in-out 0ms,
-                transform 20ms ease-in-out 0ms;
-}
-
-.overlay.active {
-    visibility:initial;
-    display: block;
-    opacity: 1;
-    position: fixed;/* Ensures it shows flexibly */
-    top: 50%;
-    opacity: 1;  
-    z-index: 100; 
-    transform: translate(50%, 50%) scale(10);
-}
-
-#signupOverlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 99;
-    display: none; /* Hidden by default */
-}
-
-.Popup-Signup {
-    display: none; /* Hidden by default */
-}
-
-.Popup-Signup.active,
-#signupOverlay.active {
-    display: flex; /* Show the popup and overlay */
-}
-
-  @media (max-width: 768px) {
-    .navbar {
-        align-items: center;
-        margin: auto;
-        padding: .5rem .5rem;
-    }
-
-    .navbar .Signup-bt  {
-        order: 1;
-        align-self: left;
-        margin-left: 1%;
-    }
-    
-    .navbar .logo {
-        display: none;
-    }
-
-
-    
-    .menu-categories {
-        top: 185%;
-        bottom: 10%;
-    }
-
-    .design-image {
-        top: 10%; /* Adjust vertical position */
-        max-width: 10000%;
-        height: 30%; /* Reduce the width for smaller screens */
-    }
-
-    
-    .hamburger {
-        cursor: pointer;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        width: 24px;
-        height: 24px;
-      
-        position: relative;
-        z-index: 25; /* Ensure it appears above the menu */
-        order: 2;
-    }
-    
-    .hamburger .bar {
-        display: block;
-        width: 100%;
-        height: 3px;
-        background-color: rgb(255, 255, 255);
-        transition: all 0.3s ease; /* Smooth animation */
-    }
-
-    .navbar {
-        flex-direction: row;
-        width: 100%;
-        height: 50px;
-        display: flex;
-        align-items: center; /* Centers items vertically within the navbar */
-        justify-content: space-between;
-        padding: 1px 10px;
-        list-style-type: none;
-        margin: auto;
-    }
-
-    /* Hide the menu by default */
-    .menu { 
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        position: fixed;
-        top: 0;
-        right: 0;
-        z-index: 15;
-        background-color: #333;
-        transition: all 0.3s ease;
-        transition: box-shadow 0.3s ease;
-    }
-
-
-    .menu-toggle:checked + .hamburger + .menu {
-        display: flex; /* Show menu when checked */
-        box-shadow: 5 8px 12px rgba(0, 0, 0, 0.2); /* Shadow properties */
-    }
-
-    .menu-toggle:checked + .hamburger .bar:nth-child(1) {
-        transform: rotate(45deg);
-        position: relative;
-        top: 9px; /* Adjust to align with the middle */
-    }
-    
-    .menu-toggle:checked + .hamburger .bar:nth-child(2) {
-        opacity: 0; /* Hide the middle bar */
-    }
-    
-    .menu-toggle:checked + .hamburger .bar:nth-child(3) {
-        transform: rotate(-45deg);
-        position: relative;
-        top: -9px; /* Adjust to align with the middle */
-    }
- __  __  ______  __    __  __    __
+/* 
+  __  __  ______  __    __  __    __
  |  \/  ||  ____||  \  |  ||  |  |  |
  | \  / || |____ |   \ |  ||  |  |  |
  | |\/| ||  ____|| |\ \|  ||  |  |  |
  | |  | || |____ | | \    ||  |__|  |
  |_|  |_||______||_|  \___||________|
+
+*/
+
+.menu {
+    display: flex;
+    padding-left: 30px;
+}
+
+.menu li a { 
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff ;
+    text-align: center;
+    transition: 0.15s ease-in-out;
+}
+
+/* Hide the checkbox itself */
+.menu-toggle {
+    display: none;
+}
+
+/* Hamburger icon styling */
+.hamburger {
+    display: none;
+    position: relative;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    z-index: 25; /* Ensure it's above the menu */
+    
+}
+
+/* Overlay styling */
+.overlay {
+    display: none; /* Hide by default */
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Darken the background */
+    z-index: 14; /* Ensure it’s on top of other elements */
+}
 
 
 
@@ -654,11 +199,11 @@ section {
 /* HOME / INDEX  */
 
 #home {
-    background: url('img/About.png') no-repeat center center/cover;
-    color: #fff; 
+    background: url('images/food-banner.jpg') no-repeat center center/cover;
+    color: #fff; /* Ensure text color is white for contrast */
     padding: 3rem 1rem;
     text-align: center;
-    position: relative; 
+    position: relative; /* Allows for a background overlay if needed */
 }
 
 /* Optional: Add an overlay for better contrast */
@@ -669,14 +214,19 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better readability */
     z-index: 1;
 }
 
 #home h1, #home p {
     position: relative;
-    z-index: 5; 
+    z-index: 5; /* Ensure text is above the overlay */
 }
+
+
+
+
+
 
 
 /* PRODUCTS  */
@@ -685,6 +235,12 @@ section {
     background-color: #f3f3f3;
     margin: 1rem 0;
 }
+
+
+
+
+
+
 
 
 /* CONTACT US */
@@ -729,6 +285,18 @@ form button:hover {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Design */
 /* SCREEN SIZES LANG ITO MGA PAR */
 
 
@@ -743,7 +311,7 @@ form button:hover {
         height: 24px;
       
         position: relative;
-        z-index: 25; 
+        z-index: 25; /* Ensure it appears above the menu */
         order: 2;
     }
     
@@ -752,7 +320,7 @@ form button:hover {
         width: 100%;
         height: 3px;
         background-color: rgb(255, 255, 255);
-        transition: all 0.3s ease; 
+        transition: all 0.3s ease; /* Smooth animation */
     }
 
     .navbar {
@@ -760,7 +328,7 @@ form button:hover {
         width: 100%;
         height: 50px;
         display: flex;
-        align-items: center; 
+        align-items: center; /* Centers items vertically within the navbar */
         justify-content: space-between;
         padding: 1px 10px;
         list-style-type: none;
@@ -794,25 +362,29 @@ form button:hover {
 
     /* When the checkbox is checked, show the menu and overlay */
     .menu-toggle:checked + .hamburger + .menu {
-        display: flex; 
-        box-shadow: 5 8px 12px rgba(0, 0, 0, 0.2);
+        display: flex; /* Show menu when checked */
+        box-shadow: 5 8px 12px rgba(0, 0, 0, 0.2); /* Shadow properties */
     }
 
     .menu-toggle:checked + .hamburger .bar:nth-child(1) {
         transform: rotate(45deg);
         position: relative;
-        top: 9px;
+        top: 9px; /* Adjust to align with the middle */
     }
     
     .menu-toggle:checked + .hamburger .bar:nth-child(2) {
-        opacity: 0; 
+        opacity: 0; /* Hide the middle bar */
     }
     
     .menu-toggle:checked + .hamburger .bar:nth-child(3) {
         transform: rotate(-45deg);
         position: relative;
-        top: -9px; 
-    }  
+        top: -9px; /* Adjust to align with the middle */
+    }
+    
+    
+
+    
 }
 
 /* For tablets and larger screens (768px and above) */
@@ -851,205 +423,125 @@ form button:hover {
     }
 }
 
-.container1{
+
+
+
+/* Contact Section Styling */
+.contact-section {
+    background-image: url('contact-background.jpg'); /* Replace this with the background image path */
+    background-size: cover;
+    background-position: center;
     position: relative;
-    width: 100%;
-    height: 100vh;
-    background: url('img/About(1).png') no-repeat center center/cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8)70%, rgba(248, 199, 52, 0.5)90%);
-    padding: 50px;
-    display: inline;
-    opacity: 1;
-    z-index: 2;
-    overflow-y: auto;
-}
-
-.left-images, .right-images {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    z-index: 3;
-}
-
-.left-images {
-    left: 5%;
-}
-
-.right-images {
-    right: 5%;
-}
-
-/* Individual side images styling */
-.left-images div, .right-images div {
-    width: 150px; /* Adjust size as needed */
-    height: 150px; /* Adjust size as needed */
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative;
-}
-
-.left-images div.bbq-image {
-    position: absolute;
-    width: 200px; /* Custom size for BBQ image */
-    height: 200px;
-    right: -120px;
-    border-radius: 60px;
-    top: -280px;
-    z-index: 2;
-}
-
-.left-images div.pep-image {
-    position: absolute;
-    width: 300px; /* Custom size for Pep image */
-    height: 500px;
-    top: -200px;
-    right: -225px;
-    z-index: 1;
-}
-
-.left-images div.banana_q-image {
-    position: absolute;
-    width: 300px; /* Custom size for Banana-Q image */
-    height: 300px;
-    left: 20px;
-    top: 50px;
-    z-index: 2;
-    transform: rotate(30deg);
-}
-
-.right-images div.bred-image {
-    position: absolute;
-    width: 200px; /* Custom size for Bread image */
-    height: 200px;
-    top: 60px;
-    left: 180px;
-    z-index: 2;
-}
-
-.right-images div.peps-image {
-    width: 300px; /* Custom size for Peps image */
-    height: 500px;
-    top: 120px;
-    left: 80px;
-    z-index: 1;
-}
-
-.right-images div.pancet-image {
-    width: 250px; /* Custom size for Pancit image */
-    height: 170px;
-    top: -10px;
-    z-index: 2;
-    left: 160px;
-    transform: rotate(-30deg);
-}
-
-.left-images img, .right-images img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    box-shadow: none;
-    border: none;
-    background: none;
-}
-
-.abt {
-    position: relative;
-    z-index: 3;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0;
-    max-width: 900px;
-    margin: 40px auto 0;
-}
-
-.curved-svg {
-    width: 100%;
-    max-width: 800px;
-    text-align: center;
-    margin-bottom: -20px;
-}
-
-.curved-text {
-    font-size: 67px;
-    letter-spacing: 0;
-    font-family: Arial, sans-serif;
-    text-transform: uppercase;
-    text-anchor: middle;
-}
-
-.store-img {
-    width: 500px;
-    height: 250px;
-    margin-top: -20px;
-    border-radius: 250px 250px 0 0;
-    overflow: hidden;
-    position: relative;
-}
-
-.store-img img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-}
-
-.lines {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px; /* Space between the lines */
-}
-
-.line {
-    background-color: black; /* Set the color of the lines */
-}
-
-.line1 {
-    width: 500px;
-    height: 5px;
-    background-color: white;
-    margin: 10px auto;
-}
-.line2 {
-    width: 500px;
-    height: 3px;
-    background-color: white;
-    margin: 10px auto;
-}
-.line3 {
-    width: 500px;
-    height: 1px;
-    background-color: white;
-    margin: 10px auto;
-}
-
-.text-content {
+    min-height: 100vh; /* Allow the section to grow beyond 100vh */
     color: white;
-    max-width: 600px;
-    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Allow content to start from the top */
+    align-items: center;
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 20px; /* Add padding for spacing */
 }
 
-.text-content p {
+/* Design image positioning */
+.design-image {
+    position: fixed; /* Positions it absolutely within its container */
+    top: 17%; /* Adjust this to move the image closer to the top of the container */
+    left: 50%; /* Centers the image horizontally */
+    transform: translateX(-50%); /* Only adjust for horizontal centering */
+    width: 100vw; /* Set width to 100% of viewport width */
+    height: 40%;
+    z-index: 1; /* Ensures it is behind the other content */
+}
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .design-image {
+        top: 13%; /* Adjust vertical position */
+        max-width: 95%; /* Reduce the width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .design-image {
+        top: 15%; 
+        max-width: 80%; 
+    }
+}
+
+/* Overlay with text */
+.overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Start from the top */
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px; /* Add padding to create space from top */
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 60px; /* Add margin at the bottom to allow space for scrolling */
+}
+
+.overlay h1 {
+    font-size: 4rem;
+    background-color: #d4d700;
+    border-radius: 10px;
+    color: black;
+    padding: 20px 40px;
+    margin-bottom: 30px;
+}
+
+.overlay h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.overlay p {
     font-size: 1.2rem;
-    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Container for contact details */
+.container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 40px; /* Add space at the bottom */
+}
+
+.contact-left {
+    flex: 1;
+    max-width: 48%;
+    text-align: left;
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.contact-right {
+    flex: 1;
+    max-width: 48%;
+    text-align: right;
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2; 
+}
+
+.contact-left p, .contact-right p {
+    margin: 10px 0;
+}
+
+.contact-left span, .contact-right span {
+    font-weight: bold;
 }
