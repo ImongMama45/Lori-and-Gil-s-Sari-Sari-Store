@@ -1,0 +1,50 @@
+
+
+/* SKEWERED FOODS MENU */
+
+.image-container3 { 
+    display: flex; 
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20% ;
+    
+}
+
+.image-wrapper2 {
+    position: relative; /* Position relative for the wrapper */
+}
+
+
+.skewered_foods {
+    position: relative; /* Position absolute for the text */
+    top: 185%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for text size */
+    width: 50;
+    color: #ffffff; /* Text color */
+    padding: 1px; /* Padding around the text */
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 4rem; /* Font size */
+    font-family: 'Koulen', sans-serif; /* Use the Koulen font */
+    text-align: center; /* Center text */
+}
+
+
+.seemore {
+    position: absolute; /* Position absolute for the text */ 
+    transform: translate(-50%, -50%); /* Adjust for text size */
+    top: 90%; 
+    left: 15%; 
+    color: #ffffff; /* Text color */
+    background-color: #16534B; /* Semi-transparent background */
+    padding: 1px; /* Padding around the text */
+    padding-left: 20px;
+    padding-right: 20px;;
+    font-size: 3rem; /* Use rem for responsive font size */
+    font-family: 'Koulen', sans-serif; 
+    text-align: center; 
+    
+}
