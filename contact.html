@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-    <link rel="stylesheet" href="constyle.css">
+    <link rel="stylesheet" href="./css-files/constyle.css">
 </head>
 <body>
 
@@ -12,7 +12,7 @@
     <header>
         <nav>
             <ul class="navbar">
-                <li class="logo"><a href="#"><img src="./img/Logo.png" alt="logo"></a></li>
+                <li class="logo"><a href="#"><img src="./images/Logo.png" alt="logo"></a></li>
                 <input type="checkbox" id="menu-toggle" class="menu-toggle">
                 <label for="menu-toggle" class="hamburger">
                     <span class="bar"></span>
@@ -21,20 +21,79 @@
                 </label>
                 <span class="menu">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="trial5_abt.html">About Us</a></li>
-                    <li><a href="products.html">Products</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="products.html" id="products-menu">Products</a></li>
                     <li><a href="contact.html" class="active">Contact</a></li>
                     <li><a href="testimonials.html">Testimonials</a></li>   
                 </span>
-                <li><a href="signup.html" class="signup-btn">Sign Up</a></li>
+                <button class="Signup-bt">
+                    Log In
+                </button>
+                
             </ul>
         </nav>
     </header>
+    <div class="overlay" id="overlay"></div>
+    <div class="Popup" id="login-Popup" >
+        <div class="close-button"> &times;</div>
+        <div class ="Login-form">
+            <h1>
+                Log In
+            </h1>
+            <div class="Login-items" >
+                <label> Username  <input type="username" id="username" placeholder="Enter Username"> </label>
+            </div>
+            <div class="Login-items" >
+                <label> Password  <input type="password" id="password" placeholder="Enter Password"></label>
+            </div>
+            <div class="Login-items" >
+                <label> <input type="checkbox" id="Remember"> Remember me? </label>
+            </div>
+            <div class="Login-items" id="Login-button">
+                <button> LOG IN </button>
+            </div>
+            <div  class="Login-items" id="Signup-link">
+                <p> Not a member <a href="#" id="showSignup"> Sign Up</a> </P>
+            </div>
+        </div>
+    </div>
+
+    <div class="Popup-Signup" id="signup-Popup">
+        <div class="close-button"> &times;</div>
+
+        <div class ="Signup-form">
+            <h1>
+                Sign Up
+            </h1>
+            <div class="Signup-items">
+                <label> Username  <input type="username" id="username" placeholder="Enter Username"> </label>
+            </div>
+            <div class="Signup-items" >
+                <label> Email  <input type="email" id="password" placeholder="Enter Email"></label>
+            </div>
+            <div class="Signup-items" >
+                <label> Password  <input type="password" id="password" placeholder="Enter Password"></label>
+            </div>
+            <div class="Signup-items" >
+                <label> Re-enter Password <input type="password" id="password" placeholder="Enter Password"></label>
+            </div>
+            <div class="Signup-items">
+                <label> <input type="checkbox"  id="showSignup"> Remember me. </label>
+            </div>
+            <div class="Signup-items" >
+                <button id="Signup-button"> Sign Up </button>
+            </div>
+            <div  class="Signup-items">
+                <p>Already got an account? <a href="#" id="showLogin">Log In</a></p>
+            </div>
+        </div>
+    </div>
+    
 
     <!-- Main Contact Section -->
     <section class="contact-section">
-        <img src="img/About(1).png" alt="design" class="design-image">
-        <div class="overlay">
+        <img src="./images/About(1)(1).png" alt="design" class="design-image">
+        <div class="overlay_con">
             <h1>CONTACT US</h1>
             <br><br><br><br><br>
             <h2>How can we help you?</h2>
@@ -54,6 +113,7 @@
             </div>
         
     </section>
+    <script src="./scripts/login_script.js"></script>
 
 </body>
 </html>
