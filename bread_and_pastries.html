@@ -143,6 +143,61 @@
             </ul>
         </nav>
     </header>
+    <div class="overlay" id="overlay"></div>
+    <div class="Popup" id="login-Popup" >
+        <div class="close-button"> &times;</div>
+        <div class ="Login-form">
+            <h1>
+                Log In
+            </h1>
+            <div class="Login-items" >
+                <label> Username  <input type="username" id="username" placeholder="Enter Username"> </label>
+            </div>
+            <div class="Login-items" >
+                <label> Password  <input type="password" id="password" placeholder="Enter Password"></label>
+            </div>
+            <div class="Login-items" >
+                <label> <input type="checkbox" id="Remember"> Remember me? </label>
+            </div>
+            <div class="Login-items" id="Login-button">
+                <button> LOG IN </button>
+            </div>
+            <div  class="Login-items" id="Signup-link">
+                <p> Not a member <a href="#" id="showSignup"> Sign Up</a> </P>
+            </div>
+        </div>
+    </div>
+
+    <div class="Popup-Signup" id="signup-Popup">
+        <div class="close-button"> &times;</div>
+
+        <div class ="Signup-form">
+            <h1>
+                Sign Up
+            </h1>
+            <div class="Signup-items">
+                <label> Username  <input type="username" id="username" placeholder="Enter Username"> </label>
+            </div>
+            <div class="Signup-items" >
+                <label> Email  <input type="email" id="password" placeholder="Enter Email"></label>
+            </div>
+            <div class="Signup-items" >
+                <label> Password  <input type="password" id="password" placeholder="Enter Password"></label>
+            </div>
+            <div class="Signup-items" >
+                <label> Re-enter Password <input type="password" id="password" placeholder="Enter Password"></label>
+            </div>
+            <div class="Signup-items">
+                <label> <input type="checkbox"  id="showSignup"> Remember me. </label>
+            </div>
+            <div class="Signup-items" >
+                <button id="Signup-button"> Sign Up </button>
+            </div>
+            <div  class="Signup-items">
+                <p>Already got an account? <a href="#" id="showLogin">Log In</a></p>
+            </div>
+        </div>
+    </div>
 
     <div class="background-section" id="background-section" style="background-color: #d19a6a;"> <!-- Change this color as needed -->
         <p>This section allows you to assign a background color.</p>
