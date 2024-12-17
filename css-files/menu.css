@@ -1,0 +1,1054 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ /* PARA SAME MARGINS AND PADDINGS FOR ALL */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+h1 {
+    font-size:90px;
+    font-weight: bold;
+    color: white;
+    margin: 10px 0;
+}
+
+ /* LOGO */
+
+.navbar .logo img {
+    width: 100px; /* Reduce the width to 50% of its original size */
+    height: auto; /* Keep the height proportional */
+    max-width: 100px;
+    max-height: 100px;
+}
+
+
+/* Navigation bar */
+header {
+    background-color: #333;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: auto;
+}
+
+/* Navigation bar styling */
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center; /* Centers items vertically within the navbar */
+    justify-content: space-between;
+    padding: 5px 10px;
+    list-style-type: none;
+    z-index: 50;
+}
+
+/* Navigation Links */
+.navbar ul {
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* nav bar links */
+.navbar li {
+    position: relative; /* Ensure dropdown is positioned relative to this */
+}
+
+.navbar li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: .5rem 1rem;
+    font-weight: bold;
+    line-height: 1.5; /* Centers text vertically */
+    transition: color 0.3s ease;
+    border-radius: .5px;
+}
+
+/* Active link styling WHEN BUTTON CLICKED AND CURRENT */
+.navbar li a.active {
+    color: #000000;
+    background-color: #d4d700;
+    border-radius: 5px;
+}
+
+/* Hover effect */
+.navbar li a:hover {
+    color: #ffee6a;
+}
+
+/* Sign-up button styling */
+.navbar .Signup-bt {
+    color: #0c0c0c;
+    background-color: #d4d700;
+    padding: 0.5rem 1rem;
+    border-radius: 2px;
+    font-size: large;
+    font-weight: bold;
+}
+
+.Signup-bt {
+    z-index: 10; /* Lower z-index compared to .hamburger */
+    position: relative;
+  
+}
+
+/* Dropdown menu styling */
+.dropdown {
+    display: none; /* Hide dropdown by default */
+    position: absolute; /* Change to absolute */
+    flex-direction: column;
+    background-color: #333; /* Background color for dropdown */
+    padding: 0; /* Remove padding */
+    z-index: 100; /* Ensure it appears above other content */
+    opacity: 0;
+    padding: auto;
+}
+
+/* Show dropdown when hovering over the Products link */
+.navbar li:hover .dropdown {
+    display: block; /* Show dropdown on hover */
+    flex-direction: column; /* Stack dropdown items vertically */
+    opacity: 100;
+    
+}
+
+/* Dropdown items */
+.dropdown li {
+    list-style-type: none; /* Remove bullet points */
+    font-weight: bold;
+    line-height: 1.5; /* Centers text vertically */
+    transition: color 0.3s ease;
+    border-radius: 2px;
+    font-size: small;
+}
+
+.dropdown li a {
+    padding: 0.5rem 1rem; /* Padding for dropdown links */
+    color: #ffffff; /* Text color */
+    text-decoration: none; /* No underline */
+    display: block; /* Make links block-level */
+    
+}
+
+/* Dropdown link hover effect */
+.dropdown li a:hover {
+    background-color: #d4d700; /* Change background on hover */
+}
+
+/* Positioning for the dropdown */
+.navbar li {
+    position: relative; /* Position relative to show dropdown */
+}
+
+
+
+
+
+.Popup-Signup {
+    position: fixed; 
+    display: flex;
+    visibility: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.25);
+    width: 400px;
+    height: 500px;
+    padding: 20px 30px;
+    background: url("./images/image1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    z-index: 120; 
+    transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 0ms;
+}
+
+.Popup-Signup {
+    align-self: center;
+    opacity:0;
+}
+
+
+.Popup-Signup.active{
+    display: flex; /* Ensures it shows flexibly */
+    top: 50%;
+    opacity: 1;  
+    visibility: visible; 
+    transform: translate(-50%, -50%) scale(1);
+    transition: top 0ms ease-in-out 0ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 200ms ease-in-out 0ms;
+}
+.Popup-Signup .close-button{
+    position: absolute;
+    top:10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    background: rgb(234, 222, 222);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    z-index: 5;
+    line-height: 15px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+
+.Popup-Signup::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    z-index: 1;
+}
+
+
+
+.Popup-Signup .Signup-items {
+    color: white;
+    position: relative; 
+    z-index: 3; 
+    margin: 1px 1px;
+
+}
+
+
+.Popup-Signup .Signup-items label {
+    color: white;
+    box-shadow: white;
+    font-size: 20px;
+
+}
+
+.Popup-Signup .Signup-items input{
+    width: 320px;
+    height: 30px;
+    margin: 10px;
+}
+
+.Popup-Signup .Signup-form .Signup-items a{
+    align-items: center;
+    text-align: center;
+    margin-left: 1%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    font-weight: 100;
+    color: #51a3fa;;
+    font-weight: 10;
+    margin-left: 1%;
+}
+
+
+.Popup-Signup .Signup-form .Signup-items p{
+    align-items: center;
+    margin-left: 15%;
+    padding-bottom: 5%;
+    padding-top: 2%;
+    font-weight: 100;
+
+}
+
+
+
+.Popup-Signup .Signup-form h1{
+    position: relative;
+    z-index: 5;
+    font-size: 25px;
+    text-align: center;
+    padding: 1%;
+    margin-top: 2%;
+}
+
+.Popup-Signup .Signup-form .Signup-items input[type="checkbox"]{
+    position: relative;
+    width: 10px;
+    height: auto;
+    text-indent: 10%;
+    margin-left: 0%;
+    margin-right: 0px;
+}
+
+
+
+.Popup-Signup .Signup-form .Signup-items button{
+    position: relative;
+    margin-top: 10px;
+    width: 100%;
+    height: 30px;
+    align-items: center;
+    text-align: center;
+    box-shadow: black;
+    background: #fbff25;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all;
+    transition: transform 0.2s;
+    margin-bottom: 10px;
+}
+
+.Popup-Signup .Signup-form .Signup-items button:hover{
+    background-color: #9b7d07d7;
+    transform: translateY(2px);
+}
+
+    /* SIGN UP AND LOGINS */
+
+
+
+.Signup-bt:checked + .Popup{
+    display: block;
+}
+
+.Popup {
+    position: fixed; 
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.25);
+    width: 360px;
+    padding: 20px 30px;
+    background: url("./images/image1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    z-index: 1; 
+    transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 0ms;
+}
+
+.Popup {
+    align-self: center;
+    opacity:0;
+}
+
+
+.Popup.active{
+    display: flex; /* Ensures it shows flexibly */
+    top: 50%;
+    opacity: 1; 
+    z-index: 120;  
+    transform: translate(-50%, -50%) scale(1);
+    transition: top 0ms ease-in-out 0ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 200ms ease-in-out 0ms;
+}
+.Popup .close-button{
+    position: absolute;
+    top:10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    background: rgb(234, 222, 222);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    z-index: 5;
+    line-height: 15px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+
+.Popup::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    z-index: 1;
+}
+
+
+.Popup .Login-form h1{
+    z-index: 20;
+    font-size: 50px;
+    text-align: center;
+    padding: 10%;
+    position: relative;
+}
+
+.Popup .Login-form .Login-items input[type="checkbox"]{
+    position: relative;
+    width: 10px;
+    height: auto;
+    text-indent: 10%;
+    margin-left: 0%;
+    margin-right: 0px;
+}
+
+
+
+.Popup .Login-form .Login-items button{
+    margin-top: 10px;
+    width: 100%;
+    height: 30px;
+    align-items: center;
+    text-align: center;
+    box-shadow: black;
+    background: #fbff25;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all;
+    transition: transform 0.2s;
+    margin-bottom: 10px;
+}
+
+.Popup .Login-form .Login-items button:hover{
+    background-color: #9b7d07d7;
+    transform: translateY(2px);
+}
+
+
+.Popup .Login-items {
+    color: white;
+    position: relative; 
+    z-index: 3; 
+    margin: 10px 10px;
+
+}
+
+.Popup .Login-items label {
+    color: white;
+    box-shadow: white;
+    
+}
+
+.Popup .Login-form .Login-items a, p{
+    align-items: center;
+    margin-left: 1%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    font-weight: 100;
+
+}
+
+.Popup .Login-form .Login-items a{
+    color: #51a3fa;
+}
+
+
+/* Popup Overlay */
+.overlay {
+    position: fixed;
+    display: none;
+    margin: 0px 0px;
+    background: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+    padding: 60px 20px; /* Add padding to create space from top */
+    width: 100%;
+
+    transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 20ms ease-in-out 0ms;
+}
+
+.overlay.active {
+    visibility:initial;
+    display: block;
+    opacity: 1;
+    position: fixed;/* Ensures it shows flexibly */
+    top: 50%;
+    opacity: 1;  
+    z-index: 100; 
+    transform: translate(50%, 50%) scale(10);
+}
+
+.Popup-Signup h1{
+    z-index: 1000;
+}
+
+#signupOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+    display: none; /* Hidden by default */
+}
+
+.Popup-Signup {
+    display: none; /* Hidden by default */
+}
+
+.Popup-Signup.active,
+#signupOverlay.active {
+    display: flex; /* Show the popup and overlay */
+}
+
+
+.menu {
+    display: flex;
+    padding-left: 30px;
+}
+
+.menu li a { 
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff ;
+    text-align: center;
+    transition: 0.15s ease-in-out;
+}
+
+/* Hide the checkbox itself */
+.menu-toggle {
+    display: none;
+}
+
+/* Hamburger icon styling */
+.hamburger {
+    display: none;
+    position: relative;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    z-index: 25; /* Ensure it's above the menu */
+    
+}
+
+
+
+section {
+    padding: 2rem;
+    text-align: center;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.image-container { 
+    display: flex; 
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+    margin-bottom: 5% ;
+    
+}
+
+
+.image-container2 img {
+    width: 100%; /* Set to 100% to make it responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.image2 {
+    width: 80%; /* Increase size for image 2 */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 600px; /* Optional: Set a max width */
+}
+
+.image3 {
+    width: 80%; /* Increase size for image 3 */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 600px; /* Optional: Set a max width */
+}
+
+.image4 {
+    width: 80%; /* Increase size for image 4 */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 600px; /* Optional: Set a max width */
+}
+
+
+.image-wrapper {
+    position: relative; /* Position relative for the wrapper */
+}
+
+
+.overlay-text {
+    position: absolute; 
+    top: 80%; 
+    left: 75%; 
+    transform: translate(-50%, -50%); 
+    color: #000; 
+    background-color: #d4d700; 
+    padding: 1px; 
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 2rem; /* Use rem for responsive font size */
+    font-family: 'Koulen', sans-serif; 
+    text-align: center; 
+}
+
+.text1, .text2, .text3 {
+    font-size: 1.5rem; /* Responsive font size */
+    margin: 10px 5%; /* Reduced horizontal margin */
+    color: #000; /* Text color */
+    background-color: #d4d700; /* Semi-transparent background */
+    padding: .5rem; /* Padding around the text */
+    font-family: 'Koulen', sans-serif; /* Use the Koulen font */
+    text-align: center; /* Center text */
+    max-width: 20%; /* Set a maximum width to limit the text border */
+    margin-left: auto; /* Center the text horizontally */
+    margin-right: auto; /* Center the text horizontally */
+}
+
+.text4 {
+
+    font-size: 1.5rem; /* Responsive font size */
+    margin: 10px 5%; /* Reduced horizontal margin */
+    color: #ffffff; /* Text color */
+    padding: .5rem; /* Padding around the text */
+    font-family: 'Koulen', sans-serif; /* Use the Koulen font */
+    text-align: center; /* Center text */
+    max-width: 50%; /* Set a maximum width to limit the text border */
+    margin-left: auto; /* Center the text horizontally */
+    margin-right: auto; /* Center the text horizontally */
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/*RESPONSIVENESS*/
+
+@media (min-width: 1440px) {
+    section {
+        padding: 3rem 0rem;
+    }
+
+    .navbar {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    
+    .menu-categories {
+        bottom: 10%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        align-items: center;
+        margin: auto;
+        padding: .5rem .5rem;
+    }
+
+    .navbar .Signup-bt  {
+        order: 1;
+        align-self: left;
+        margin-left: 1%;
+    }
+    
+    .navbar .logo {
+        display: none;
+    }
+
+
+    
+    .menu-categories {
+        top: 185%;
+        bottom: 10%;
+    }
+
+    .design-image {
+        top: 10%; /* Adjust vertical position */
+        max-width: 10000%;
+        height: 30%; /* Reduce the width for smaller screens */
+    }
+
+    
+    .hamburger {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 24px;
+        height: 24px;
+      
+        position: relative;
+        z-index: 25; /* Ensure it appears above the menu */
+        order: 2;
+    }
+    
+    .hamburger .bar {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: rgb(255, 255, 255);
+        transition: all 0.3s ease; /* Smooth animation */
+    }
+
+    .navbar {
+        flex-direction: row;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center; /* Centers items vertically within the navbar */
+        justify-content: space-between;
+        padding: 1px 10px;
+        list-style-type: none;
+        margin: auto;
+    }
+
+    /* Hide the menu by default */
+    .menu { 
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 15;
+        background-color: #333;
+        transition: all 0.3s ease;
+        transition: box-shadow 0.3s ease;
+    }
+
+
+    .menu-toggle:checked + .hamburger + .menu {
+        display: flex; /* Show menu when checked */
+        box-shadow: 5 8px 12px rgba(0, 0, 0, 0.2); /* Shadow properties */
+    }
+
+    .menu-toggle:checked + .hamburger .bar:nth-child(1) {
+        transform: rotate(45deg);
+        position: relative;
+        top: 9px; /* Adjust to align with the middle */
+    }
+    
+    .menu-toggle:checked + .hamburger .bar:nth-child(2) {
+        opacity: 0; /* Hide the middle bar */
+    }
+    
+    .menu-toggle:checked + .hamburger .bar:nth-child(3) {
+        transform: rotate(-45deg);
+        position: relative;
+        top: -9px; /* Adjust to align with the middle */
+    }
+    
+    /* Home section text for mobile */
+    #home {
+        height: 150vh; /* Full viewport height for a banner effect */
+        width: auto;
+        flex-direction: column;
+        column-gap: 0;
+    }
+
+    #home .content {
+        width: 100%;
+        font-size: 0.8rem; /* Smaller font size */
+    }
+
+       
+    #logo-home img {
+        width: 100%; /* Make the logo responsive */
+        top: 10%;
+        left: 10%;
+        max-width: 400px;
+        margin-bottom: auto;
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 50px; /* Add some spacing to the right of the logo */
+        z-index: 90;
+    }
+    /* Adjust form for small screens */
+    form {
+        width: 90%;
+    }
+
+}
+
+
+@media (max-width: 610px) {
+    /* Show the hamburger icon */
+    /* Home Section */
+    #home {
+        height: 150vh; /* Full viewport height for a banner effect */
+        width: auto;
+        flex-direction: column;
+        column-gap: 0;
+    }
+
+    #home .content {
+        width: 100%;
+        font-size: 0.8rem; /* Smaller font size */
+        order: 2;
+        margin-top: -15rem;
+    }
+
+    
+
+    #menu .dropdown {
+        display: none;
+    }
+
+        
+    #logo-home img {
+        width: 100%; /* Make the logo responsive */
+        top: 10%;
+        left: 10%;
+        max-width: 400px;
+        margin-bottom: 20px;
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 50px; /* Add some spacing to the right of the logo */
+        z-index: 90;
+        order: 1;
+    }
+
+    #home_button {
+        font-size: 1rem; /* Adjust button font size */
+        padding: 0.5rem 1rem; /* Adjust button padding */
+    }
+
+    #home {
+        top: 20px;
+    }
+
+    .menu-categories {
+        top: 185%;
+        bottom: 10%;
+        left: 50%;
+        justify-content: center;
+        gap:2.5rem;
+        
+    }
+    
+    .menu-categories a {
+        font-size: 1.2rem;
+        color: #fff;
+        text-decoration: none;
+        text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.7);
+        z-index: 80;
+    }
+    
+    .menu li {
+        padding: 0px 10;
+    }
+
+    /* When the checkbox is checked, show the menu and overlay */
+    
+    
+    .design-image {
+        top: 15%; /* Adjust vertical position */
+        max-width: 80%; /* Further reduce the width */
+    }
+}
+
+
+/* For tablets and larger screens (768px and above) */
+@media (min-width: 1024px) {
+    section {
+        padding: 3rem 1rem;
+    }
+
+    .navbar {
+        max-width: 1200px;
+        margin: auto;
+    }
+}
+
+
+
+@media (max-width: 1024px) {
+    .overlay-text {
+        font-size: 2rem; /* Smaller font size for tablets */
+        top: 75%; /* Adjust position for smaller screens */
+    }
+
+    .text1, .text2, .text3, .text4{
+        font-size: 1.5rem; /* Smaller font size for tablets */
+        top: 75%; /* Adjust position for smaller screens */
+    }
+    
+}
+
+@media (max-width: 1020px) {
+    .overlay-text {
+        font-size: 1.8rem; /* Smaller font size for tablets */
+        top: 75%; /* Adjust position for smaller screens */
+    }
+
+    .text1, .text2, .text3, .text4{
+        font-size: 1.3rem; /* Smaller font size for tablets */
+        top: 75%; /* Adjust position for smaller screens */
+    }
+    
+
+    
+}
+
+@media (max-width: 854px) {
+    .overlay-text {
+        font-size: 1.5rem; /* Smaller font size for tablets */
+        top: 75%; /* Adjust position for smaller screens */
+    }
+
+    .text1, .text2, .text3, .text4{
+        font-size: 1rem; /* Smaller font size for tablets */
+        top: 75%; /* Adjust position for smaller screens */
+    }
+    
+
+    
+}
+
+@media (max-width: 768px) {
+    .overlay-text {
+        font-size: 1.2rem; /* Smaller font size for tablets */
+        top: 75%; /* Adjust position for smaller screens */
+    }
+
+    .text1, .text2, .text3, .text4{
+        font-size: 1rem; /* Smaller font size for tablets */
+        top: 75%; /* Adjust position for smaller screens */
+    }
+    
+
+   
+}
+
+@media (max-width: 690px) {
+    .overlay-text {
+        font-size: 1rem; /* Smaller font size for tablets */
+        top: 75%; /* Adjust position for smaller screens */
+    }
+
+    .text1, .text2, .text3, .text4{
+        font-size: .9rem; /* Smaller font size for tablets */
+        top: 75%; /* Adjust position for smaller screens */
+    }
+    
+
+   
+}
+
+@media (max-width: 668px) {
+    .overlay-text {
+        font-size: 1rem; /* Smaller font size for tablets */
+        top: 75%; /* Adjust position for smaller screens */
+    }
+
+    .text1, .text2, .text3, .text4{
+        font-size: .7rem; /* Smaller font size for tablets */
+        top: 75%; /* Adjust position for smaller screens */
+    }
+    
+}
+
+
+
+
+
+@media (max-width: 525px) {
+    .overlay-text {
+        font-size: .9rem; /* Even smaller font size for mobile */
+        top: 70%; /* Further adjust position */
+    }
+
+    .text1, .text2, .text3, .text4{
+        font-size: .6rem; /* Smaller font size for tablets */
+        top: 70%; /* Adjust position for smaller screens */
+    }
+
+   
+}
+
+@media (max-width: 508px) {
+    .overlay-text {
+        font-size: 1rem; /* Smaller font size for tablets */
+        top: 75%; /* Adjust position for smaller screens */
+    }
+
+    .text1, .text2, .text3, .text4{
+        font-size: .6rem; /* Smaller font size for tablets */
+        top: 75%; /* Adjust position for smaller screens */
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .overlay-text {
+        font-size: .9rem; /* Even smaller font size for mobile */
+        top: 70%; /* Further adjust position */
+    }
+
+    .text1, .text2, .text3, .text4{
+        font-size: .6rem; /* Smaller font size for tablets */
+        top: 70%; /* Adjust position for smaller screens */
+    }
+
+ 
+
+}
+
+@media (max-width: 375px) {
+    .overlay-text {
+        font-size: .4rem; /* Even smaller font size for mobile */
+        top: 70%; /* Further adjust position */
+    }
+
+    .text1, .text2, .text3, .text4{
+        font-size: .4rem; /* Smaller font size for tablets */
+        top: 70%; /* Adjust position for smaller screens */
+    }
+
+
+
+}
+
+@media (max-width: 320px) {
+    .overlay-text {
+        font-size: .4rem; /* Even smaller font size for mobile */
+        top: 70%; /* Further adjust position */
+    }
+
+    .text1, .text2, .text3, .text4{
+        font-size: .4rem; /* Smaller font size for tablets */
+        top: 70%; /* Adjust position for smaller screens */
+    }
+
+
+}
