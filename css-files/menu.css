@@ -920,7 +920,7 @@ img {
     
 }
 
-@media (max-width: 854px) {
+@media (max-width: 856px) {
     .overlay-text {
         font-size: 1.5rem; /* Smaller font size for tablets */
         top: 75%; /* Adjust position for smaller screens */
@@ -979,7 +979,19 @@ img {
 }
 
 
+@media (max-width: 526px) {
+    .overlay-text {
+        font-size: .9rem; /* Even smaller font size for mobile */
+        top: 70%; /* Further adjust position */
+    }
 
+    .text1, .text2, .text3, .text4{
+        font-size: .6rem; /* Smaller font size for tablets */
+        top: 70%; /* Adjust position for smaller screens */
+    }
+
+   
+}
 
 
 @media (max-width: 525px) {
@@ -996,9 +1008,9 @@ img {
    
 }
 
-@media (max-width: 508px) {
+@media (max-width: 500px) {
     .overlay-text {
-        font-size: 1rem; /* Smaller font size for tablets */
+        font-size: .9rem; /* Smaller font size for tablets */
         top: 75%; /* Adjust position for smaller screens */
     }
 
@@ -1024,6 +1036,85 @@ img {
 
 }
 
+
+@media (max-width: 474px) {
+    .overlay-text {
+        font-size: .8rem; /* Even smaller font size for mobile */
+        top: 70%; /* Further adjust position */
+    }
+
+    .text1, .text2, .text3, .text4{
+        font-size: .6rem; /* Smaller font size for tablets */
+        top: 70%; /* Adjust position for smaller screens */
+    }
+
+ 
+
+}
+
+
+@media (max-width: 472px) {
+    .overlay-text {
+        font-size: .8rem; /* Even smaller font size for mobile */
+        top: 70%; /* Further adjust position */
+    }
+
+    .text1, .text2, .text3, .text4{
+        font-size: .5rem; /* Smaller font size for tablets */
+        top: 70%; /* Adjust position for smaller screens */
+    }
+
+ 
+
+}
+
+
+@media (max-width: 446px) {
+    .overlay-text {
+        font-size: .7rem; /* Even smaller font size for mobile */
+        top: 70%; /* Further adjust position */
+    }
+
+    .text1, .text2, .text3, .text4{
+        font-size: .5rem; /* Smaller font size for tablets */
+        top: 70%; /* Adjust position for smaller screens */
+    }
+
+ 
+
+}
+
+
+@media (max-width: 419px) {
+    .overlay-text {
+        font-size: .6rem; /* Even smaller font size for mobile */
+        top: 70%; /* Further adjust position */
+    }
+
+    .text1, .text2, .text3, .text4{
+        font-size: .4rem; /* Smaller font size for tablets */
+        top: 70%; /* Adjust position for smaller screens */
+    }
+
+ 
+
+}
+
+@media (max-width: 390px) {
+    .overlay-text {
+        font-size: .5rem; /* Even smaller font size for mobile */
+        top: 70%; /* Further adjust position */
+    }
+
+    .text1, .text2, .text3, .text4{
+        font-size: .4rem; /* Smaller font size for tablets */
+        top: 70%; /* Adjust position for smaller screens */
+    }
+
+
+
+}
+
 @media (max-width: 375px) {
     .overlay-text {
         font-size: .4rem; /* Even smaller font size for mobile */
@@ -1039,14 +1130,46 @@ img {
 
 }
 
-@media (max-width: 320px) {
+@media (max-width: 362px) {
     .overlay-text {
         font-size: .4rem; /* Even smaller font size for mobile */
         top: 70%; /* Further adjust position */
     }
 
     .text1, .text2, .text3, .text4{
-        font-size: .4rem; /* Smaller font size for tablets */
+        font-size: .3rem; /* Smaller font size for tablets */
+        top: 70%; /* Adjust position for smaller screens */
+    }
+
+
+
+}
+
+
+@media (max-width: 334px) {
+    .overlay-text {
+        font-size: .3rem; /* Even smaller font size for mobile */
+        top: 70%; /* Further adjust position */
+    }
+
+    .text1, .text2, .text3, .text4{
+        font-size: .3rem; /* Smaller font size for tablets */
+        top: 70%; /* Adjust position for smaller screens */
+    }
+
+
+
+}
+
+
+@media (max-width: 320px) {
+    .overlay-text {
+        font-size: .3rem; /* Even smaller font size for mobile */
+        top: 70%; /* Further adjust position */
+    }
+
+    .text1, .text2, .text3, .text4{
+        font-size: .3rem; /* Smaller font size for tablets */
         top: 70%; /* Adjust position for smaller screens */
     }
 
