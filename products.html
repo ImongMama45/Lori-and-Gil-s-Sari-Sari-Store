@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products | Promotional Food Website</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu.css">
     <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
 </head>
 <style>
@@ -13,108 +13,6 @@ body {
     background-size: cover;
     background-repeat: repeat-y;
 }
-
-
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-section {   
-    padding: 0; 
-    text-align: center; 
-
-}
-
-.image-container { 
-    display: flex; 
-    width: 100%;
-    height: auto;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 5% ;
-    
-}
-
-
-.image-container2 img {
-    width: 100%; /* Set to 100% to make it responsive */
-    height: auto; /* Maintain aspect ratio */
-}
-
-.image2 {
-    width: 80%; /* Increase size for image 2 */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 600px; /* Optional: Set a max width */
-}
-
-.image3 {
-    width: 80%; /* Increase size for image 3 */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 600px; /* Optional: Set a max width */
-}
-
-.image4 {
-    width: 80%; /* Increase size for image 4 */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 600px; /* Optional: Set a max width */
-}
-
-
-.image-wrapper {
-    position: relative; /* Position relative for the wrapper */
-}
-
-
-.overlay-text {
-    position: absolute; 
-    top: 80%; 
-    left: 75%; 
-    transform: translate(-50%, -50%); 
-    color: #000; 
-    background-color: #d4d700; 
-    padding: 1px; 
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 2rem; /* Use rem for responsive font size */
-    font-family: 'Koulen', sans-serif; 
-    text-align: center; 
-}
-
-.text1, .text2, .text3 {
-    font-size: 1.5rem; /* Responsive font size */
-    margin: 10px 5%; /* Reduced horizontal margin */
-    color: #000; /* Text color */
-    background-color: #d4d700; /* Semi-transparent background */
-    padding: .5rem; /* Padding around the text */
-    font-family: 'Koulen', sans-serif; /* Use the Koulen font */
-    text-align: center; /* Center text */
-    max-width: 20%; /* Set a maximum width to limit the text border */
-    margin-left: auto; /* Center the text horizontally */
-    margin-right: auto; /* Center the text horizontally */
-}
-
-.text4 {
-
-    font-size: 1.5rem; /* Responsive font size */
-    margin: 10px 5%; /* Reduced horizontal margin */
-    color: #ffffff; /* Text color */
-    padding: .5rem; /* Padding around the text */
-    font-family: 'Koulen', sans-serif; /* Use the Koulen font */
-    text-align: center; /* Center text */
-    max-width: 50%; /* Set a maximum width to limit the text border */
-    margin-left: auto; /* Center the text horizontally */
-    margin-right: auto; /* Center the text horizontally */
-
-
-}
-
-
-
-
-
-    
 </style>
 <body>
     <header>
@@ -128,74 +26,16 @@ section {
                     <span class="bar"></span>
                 </label>
                 <span class="menu">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="aboutus.html">About Us</a></li>
-                    <li><a href="products.html " id="products-menu" class="active">Products</a></li>
+                    <li><a href="products.html">Products</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="testimonials.html">Testimonials</a></li>   
                 </span>
-                <button class="Signup-bt">
-                    Log In
-                </button>
-                
+                <li><a href="signup.html" class="signup-btn">Sign Up</a></li>
             </ul>
         </nav>
     </header>
-    <div class="overlay" id="overlay"></div>
-    <div class="Popup" id="login-Popup" >
-        <div class="close-button"> &times;</div>
-        <div class ="Login-form">
-            <h1>
-                Log In
-            </h1>
-            <div class="Login-items" >
-                <label> Username  <input type="username" id="username" placeholder="Enter Username"> </label>
-            </div>
-            <div class="Login-items" >
-                <label> Password  <input type="password" id="password" placeholder="Enter Password"></label>
-            </div>
-            <div class="Login-items" >
-                <label> <input type="checkbox" id="Remember"> Remember me? </label>
-            </div>
-            <div class="Login-items" id="Login-button">
-                <button> LOG IN </button>
-            </div>
-            <div  class="Login-items" id="Signup-link">
-                <p> Not a member <a href="#" id="showSignup"> Sign Up</a> </P>
-            </div>
-        </div>
-    </div>
-
-    <div class="Popup-Signup" id="signup-Popup">
-        <div class="close-button"> &times;</div>
-
-        <div class ="Signup-form">
-            <h1>
-                Sign Up
-            </h1>
-            <div class="Signup-items">
-                <label> Username  <input type="username" id="username" placeholder="Enter Username"> </label>
-            </div>
-            <div class="Signup-items" >
-                <label> Email  <input type="email" id="password" placeholder="Enter Email"></label>
-            </div>
-            <div class="Signup-items" >
-                <label> Password  <input type="password" id="password" placeholder="Enter Password"></label>
-            </div>
-            <div class="Signup-items" >
-                <label> Re-enter Password <input type="password" id="password" placeholder="Enter Password"></label>
-            </div>
-            <div class="Signup-items">
-                <label> <input type="checkbox"  id="showSignup"> Remember me. </label>
-            </div>
-            <div class="Signup-items" >
-                <button id="Signup-button"> Sign Up </button>
-            </div>
-            <div  class="Signup-items">
-                <p>Already got an account? <a href="#" id="showLogin">Log In</a></p>
-            </div>
-        </div>
-    </div>
 
     <section id="products">
 
@@ -237,7 +77,6 @@ section {
             
         </div>
     </section>
-    <script src="./scripts/login_script.js"></script>
 </body>
 </html>
 
