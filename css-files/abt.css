@@ -5,7 +5,6 @@
     box-sizing: border-box;
     border: none;
     outline: none;
-    scroll-behavior: smooth;
 }
 
  /* PARA SAME MARGINS AND PADDINGS FOR ALL */
@@ -851,7 +850,7 @@ form button:hover {
     position: relative;
     width: 100%;
     height: 100vh;
-    background: url('../images/About(1).png') no-repeat center center/cover;
+    background: url('images/About(1).png') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -980,10 +979,12 @@ form button:hover {
 }
 
 .curved-svg {
+    position: relative;
     width: 100%;
     max-width: 800px;
     text-align: center;
     margin-bottom: -20px;
+    top: 130px;
 }
 
 .curved-text {
@@ -997,6 +998,7 @@ form button:hover {
 .store-img {
     width: 500px;
     height: 250px;
+    top: 150px;
     margin-top: -20px;
     border-radius: 250px 250px 0 0;
     overflow: hidden;
@@ -1010,6 +1012,8 @@ form button:hover {
 }
 
 .lines {
+    position: relative;
+    top: 140px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1040,12 +1044,141 @@ form button:hover {
 }
 
 .text-content {
+    position: relative;
     color: white;
     max-width: 600px;
     margin: 0 20px;
+    top: 150px;
+    overflow-y: auto;
+
 }
 
 .text-content p {
     font-size: 1.2rem;
     line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+    .container1 {
+        height: auto;
+        padding: 20px;
+    }
+
+    .overlay_bg {
+        height: 100%;
+        padding: 30px;
+        top: 0;
+    }
+
+    .left-images div, .right-images div {
+        width: 120px;
+        height: 120px;
+    }
+
+    .left-images div.bbq-image {
+        width: 150px;
+        height: 150px;
+        left: 10px;
+        top: -150px;
+        transform: rotate(45deg);
+    }
+
+    .left-images div.pep-image {
+        width: 200px;
+        height: 250px;
+        left: -50px;
+        top: -80px;
+    }
+
+    .left-images div.banana_q-image {
+        width: 140px;
+        height: 140px;
+        left: 10;
+        top: 90px;
+        transform: rotate(-30deg);
+    }
+
+    .right-images div.bred-image {
+        width: 150px;
+        height: 150px;
+        right: 20px;
+        top: 12%;
+    }
+
+    .right-images div.peps-image {
+        width: 200px;
+        height: 250px;
+        right: -10%;
+        bottom: 8%;
+    }
+
+    .right-images div.pancet-image {
+        width: 140px;
+        height: 120px;
+        right: -5%;
+        top: 80px;
+        transform: translateY(-50%) rotate(-15deg);
+    }
+
+    .abt {
+        max-width: 700px;
+        margin: 20px auto;
+    }
+
+    .store-img {
+        width: 400px;
+        height: 200px;
+    }
+
+    .line1, .line2, .line3 {
+        width: 400px;
+    }
+
+    .text-content p {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+}
+
+/* Responsive for Mobile (Below 768px) */
+@media (max-width: 768px) {
+    .container1 {
+        height: 100vh;
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    .overlay_bg {
+        padding: 20px;
+    }
+
+    .left-images div, .right-images {
+        display: none;
+    }
+
+
+    .abt {
+        max-width: 90%;
+        margin: 20px auto;
+        padding: 0 10px;
+    }
+
+    .curved-svg {
+        max-width: 100%;
+        margin-bottom: 0;
+    }
+
+    .store-img {
+        width: 300px;
+        height: 150px;
+    }
+
+    .line1, .line2, .line3 {
+        width: 300px;
+    }
+
+    .text-content p {
+        font-size: 0.9rem;
+        line-height: 1.3;
+    }
 }
