@@ -12,6 +12,14 @@ body {
     padding: 0;
 }
 
+body {
+        background-color: #3EA597;
+        background-repeat: no-repeat;
+        background-color: #3EA597;
+        background-size: 1261px 800px;
+    }
+
+
 
 h1 {
     font-size:90px;
@@ -559,13 +567,6 @@ img {
 header {
     background-color: #16534B;
 }
-
-    body {
-        background-color: #3EA597;
-        background-repeat: no-repeat;
-        background-color: #3EA597;
-        background-size: 1261px 800px;
-    }
 
 
     /* SKEWERED FOODS MENU */
