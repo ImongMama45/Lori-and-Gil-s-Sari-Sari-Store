@@ -8,110 +8,131 @@
     <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
 </head>
 <style>
+
 body {
     background-image: url('./images/bg.png');
     background-size: cover;
     background-repeat: repeat-y;
 }
 
-
-
 img {
     max-width: 100%;
     height: auto;
 }
 
-section {   
-    padding: 0; 
-    text-align: center; 
-
+section {
+    padding: 0;
+    text-align: center;
 }
 
-.image-container { 
-    display: flex; 
+.image-container {
+    display: flex;
     width: 100%;
     height: auto;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 5% ;
-    
+    margin-bottom: 5%;
 }
-
 
 .image-container2 img {
-    width: 100%; /* Set to 100% to make it responsive */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    height: auto;
 }
 
-.image2 {
-    width: 80%; /* Increase size for image 2 */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 600px; /* Optional: Set a max width */
+.image2, .image3, .image4 {
+    width: 80%;
+    max-width: 600px;
+    height: auto;
 }
-
-.image3 {
-    width: 80%; /* Increase size for image 3 */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 600px; /* Optional: Set a max width */
-}
-
-.image4 {
-    width: 80%; /* Increase size for image 4 */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 600px; /* Optional: Set a max width */
-}
-
 
 .image-wrapper {
-    position: relative; /* Position relative for the wrapper */
+    position: relative;
 }
-
 
 .overlay-text {
     position: absolute; 
     top: 80%; 
-    left: 75%; 
+    left: 50%; 
     transform: translate(-50%, -50%); 
     color: #000; 
     background-color: #d4d700; 
-    padding: 1px; 
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 1px 20px; 
     font-size: 2rem; /* Use rem for responsive font size */
     font-family: 'Koulen', sans-serif; 
     text-align: center; 
+    white-space: nowrap; /* Prevent text wrapping */
+    display: inline-block; /* Ensure it's inline for better alignment */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
 }
 
 .text1, .text2, .text3 {
-    font-size: 1.5rem; /* Responsive font size */
-    margin: 10px 5%; /* Reduced horizontal margin */
-    color: #000; /* Text color */
-    background-color: #d4d700; /* Semi-transparent background */
-    padding: .5rem; /* Padding around the text */
-    font-family: 'Koulen', sans-serif; /* Use the Koulen font */
-    text-align: center; /* Center text */
-    max-width: 20%; /* Set a maximum width to limit the text border */
-    margin-left: auto; /* Center the text horizontally */
-    margin-right: auto; /* Center the text horizontally */
+    font-size: 1.5rem;
+    margin: 10px auto;
+    color: #000;
+    background-color: #d4d700;
+    padding: 0.5rem;
+    font-family: 'Koulen', sans-serif;
+    text-align: center;
+    max-width: 20%;
 }
 
 .text4 {
-
-    font-size: 1.5rem; /* Responsive font size */
-    margin: 10px 5%; /* Reduced horizontal margin */
-    color: #ffffff; /* Text color */
-    padding: .5rem; /* Padding around the text */
-    font-family: 'Koulen', sans-serif; /* Use the Koulen font */
-    text-align: center; /* Center text */
-    max-width: 50%; /* Set a maximum width to limit the text border */
-    margin-left: auto; /* Center the text horizontally */
-    margin-right: auto; /* Center the text horizontally */
-
-
+    font-size: 1.5rem;
+    margin: 10px auto;
+    color: #ffffff;
+    padding: 0.5rem;
+    font-family: 'Koulen', sans-serif;
+    text-align: center;
+    max-width: 50%;
 }
 
+/* Add responsiveness with media queries */
+@media (max-width: 1024px) {
+    .text1, .text2, .text3 {
+        font-size: 1.2rem;
+        max-width: 40%; /* Increase width for smaller screens */
+    }
 
+    .text4 {
+        font-size: 1.3rem;
+        max-width: 70%; /* Increase width for better readability */
+    }
 
+    .image2, .image3, .image4 {
+        max-width: 90%; /* Adjust images for smaller screens */
+    }
+
+    .overlay-text {
+        font-size: 1.5rem; /* Adjust text size for medium screens */
+        padding: 5px 15px; /* Adjust padding */
+    }
+}
+   
+
+@media (max-width: 600px) {
+    .text1, .text2, .text3, .text4 {
+        font-size: 1rem; /* Further reduce font size */
+        max-width: 90%; /* Expand width for better fit */
+    }
+
+    .overlay-text {
+        font-size: 1.2rem; /* Adjust overlay text size */
+    }
+
+    .image2, .image3, .image4 {
+        width: 100%; /* Full width for very small screens */
+    }
+
+    
+    .overlay-text {
+        font-size: 1.2rem; /* Smaller font for narrow screens */
+        padding: 5px 10px; /* Reduce padding */
+        top: 85%; /* Adjust position for smaller screens */
+        left: 50%; /* Keep it horizontally centered */
+        transform: translate(-50%, -50%); /* Maintain alignment */
+    }
+}
 
 
     
